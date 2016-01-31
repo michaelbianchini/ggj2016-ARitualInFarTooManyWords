@@ -15,9 +15,10 @@ public class GameEventDatabase : ScriptableObject
 			database = new List<GameEvent>();
 	}
 
-	public void Add(GameEvent e)
+	public int Add(GameEvent e)
 	{
 		database.Add(e);
+		return database.Count - 1;
 	}
 
 	public void Remove(GameEvent e)
@@ -29,10 +30,31 @@ public class GameEventDatabase : ScriptableObject
 	{
 		database.RemoveAt(index);
 	}
+	public void Clear()
+	{
+		database.Clear();
+	}
 
 	public int Count
 	{
 		get { return database.Count; }
+	}
+
+	public int IndexOf(string key)
+	{
+		return database.IndexOf(this[key]);
+	}
+
+	public GameEvent this[int key]
+	{
+		get
+		{
+			return database[key];
+		}
+		set
+		{
+			database[key] = value;
+		}
 	}
 
 	public GameEvent this[string key]
