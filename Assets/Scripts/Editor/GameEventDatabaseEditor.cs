@@ -225,7 +225,7 @@ public class GameEventDatabaseEditor : EditorWindow
 		currentDatabase.Clear();
 		var eventRegex = new Regex("\\[[\\s\\S]+?(?=;)", RegexOptions.Multiline);
 		var keyAndTextRegex = new Regex("\\[(?<key>.+?)\\] ?(?<flags>{[\\w, !]+})?(\\r\\n)?(?<text>[\\s\\S]+?)(?=<)", RegexOptions.Multiline);
-		var optionRegex = new Regex("(?<flags><[!\\w ]*>) ?(?<text>[\\s\\S]+?\\]) *(?:\n|\r|\r\n)", RegexOptions.Multiline);
+		var optionRegex = new Regex("(?<flags><[!,\\w ]*>) ?(?<text>[\\s\\S]+?\\]) *(?:\n|\r|\r\n)", RegexOptions.Multiline);
 		var targetRegex = new Regex("\\[(?<target>.+?)\\]", RegexOptions.Multiline);
 		var choiceTextRegex = new Regex("^([\\s\\S]+?(?=\\[))", RegexOptions.Multiline);
 		var flagsRegex = new Regex("!?\\w+");

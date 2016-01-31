@@ -42,8 +42,8 @@ public class Game : MonoBehaviour
 		if (key == "Start")
 			_story = new StringBuilder();
 		var e = _eventDatabase[key];
-		_eventText.text = "<color=grey>" + _story.ToString() + "</color>\n" + e.Text;
-		_story.Append("\n"+e.Text);
+		_eventText.text = "<color=grey>" + _story.ToString() + "</color>" + e.Text;
+		_story.Append(e.Text);
 		StartCoroutine(UpdateScroll());
 
 		e.Flags.ForEach(f => _flags.Add(f));
