@@ -9,7 +9,6 @@ public class LoadNextSceneOnStart: MonoBehaviour
 	float _delay = 0.0f;
 
 	AsyncOperation sceneLoadAsync;
-
 	void Start ()
 	{
 		if (_level == -1)
@@ -18,7 +17,7 @@ public class LoadNextSceneOnStart: MonoBehaviour
 		sceneLoadAsync.allowSceneActivation = false;
 		Invoke("Load", _delay);
 	}
-	void Load()
+	public void Load()
 	{
 		sceneLoadAsync.allowSceneActivation = true;
 	}
