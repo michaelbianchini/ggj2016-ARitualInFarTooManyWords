@@ -5,11 +5,14 @@ public class Settings : MonoBehaviour
 {
 	public void Quit()
 	{
-		if(Application.isEditor)
+#if UNITY_EDITOR
+		if (Application.isEditor)
 		{
 			UnityEditor.EditorApplication.isPlaying = false;
+			return;
 		}
-		else
+#else
 			Application.Quit();
+#endif
 	}
 }
