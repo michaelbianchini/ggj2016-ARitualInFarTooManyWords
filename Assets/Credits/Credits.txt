@@ -1,5 +1,5 @@
 Team:
-Blas
+
 Scott "Scooter" Martin - Writing
 Jeff Kikel - Writing
 E "QnRamoth" Denison - Writing
