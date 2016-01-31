@@ -590,7 +590,7 @@ As you are working diligently tilling your cornfields one sweltering afternoon, 
 
 
 [FarmerInitialEvent2]
-You realize that this peat-black mass is in fact hurtling in the direction of your field, and straight for you! You scramble to get out of the way as it crashes to the earth, sending chunks of thick, steaming hot sludge streaming through the air, showering you with filth mixed amongst remnants of your crops. The stench is at once familiar and foreign. You distinctly recognize the smell of rich manure, but the odor is tainted by a peculiar, pungent basenote of sulfur.
+You realize that this peat-black mass is in fact hurtling in the direction of your field and straight for you! You scramble to get out of the way as it crashes to the earth, sending chunks of thick, steaming hot sludge streaming through the air, showering you with filth mixed amongst remnants of your crops. The stench is at once familiar and foreign. You distinctly recognize the smell of rich manure, but the odor is tainted by a peculiar, pungent basenote of sulfur.
 <> Continue. [FarmerInitialEvent3]
 ;
 
@@ -768,11 +768,11 @@ You make out quite well with the the deal, earning a supplemental income on top 
 [FarmerUniqueEvent1]
 In the past week, several of your and your neighbors’ livestock have gone missing, and you had found one of your sheep last week mauled to death by what appears to be a pack of wolves. This morning, a neighbor has reported that his daughter had gone missing, and after organizing a search, the remains of her body are found on the edge of the woods by your property.
 <infamous> I go into town and attempt to rally the townspeople to drive the wolves off. [FarmerWolfInfamousFight1]
-<!infamous> I go into town and attempt to rally the townspeople to drive the wolves off. [FarmerWolfNotInfamousFight]
-<infamous> I ask help from the local noble to deal with the threat. [FarmerWolfInfamousNoble]
-<!infamous> I ask help from the local noble to deal with the threat. [FarmerWolfNotInfamousNoble]
-<familyisdead> I try to build a fence around my property. [FarmerFenceDeadFamily]
-<!familyisdead> I try to build a fence around my property. [FarmerFenceLiveFamily]
+<!infamous> I go into town and attempt to rally the townspeople to drive the wolves off. [FarmerWolfNotInfamousFight1]
+<infamous> I ask help from the local magistrate to deal with the threat. [FarmerWolfInfamousNoble1]
+<!infamous> I ask help from the local magistrate to deal with the threat. [FarmerWolfNotInfamousNoble1]
+<familyisdead> I try to build a fence around my property. [FarmerFenceDeadFamily1]
+<!familyisdead> I try to build a fence around my property. [FarmerFenceLiveFamily1]
 ;
 
 
@@ -788,39 +788,62 @@ As the attacks continue and local supplies of milk, eggs, and meat dwindle, the 
 ;
 
 
-[FarmerWolfNotInfamousFight]
-You enter town and after your earnest entreaties, you manage to rally a large number of helpful individuals to return with you to the countryside. You di
-The townspeople rally and thank you for your efforts.
+[FarmerWolfNotInfamousFight1]
+You enter town and after your earnest entreaties, you manage to rally a large number of helpful individuals to return with you to the countryside. You divide the crowd into pairs and everyone is armed with torches and spears, along with a few swords and daggers supplied by the local militia. In a coordinated sweep, you take several passes through the forests, killing several wolves and driving the rest away.
+<> Continue. [FarmerWolfNotInfamousFight2]
+;
+
+
+[FarmerWolfNotInfamousFight2]
+With the success of the coordinated efforts, the villagers regard you as a valiant and heroic leader. The local magistrate calls on the knight in residence and arranges for a ceremony in your honor.
 <> Continue. [Knight]
 ;
 
 
-[FarmerWolfInfamousNoble]
-The noble has heard of your misdeeds and arrests you.
-<> Continue. [Execution]
+[FarmerWolfInfamousNoble1]
+You travel into town to the local magistrate and attempt to plead the case of the village farmsteads. However, the local magistrate has heard much of your history committing selfish and ethically questionable actions. By his best interpretation, you are in part responsible for much of the plight faced by the village. Rather than helping you, the magistrate calls on your arrest and judgement.
+<> Continue. [FarmerExecution]
 ;
 
 
-[FarmerWolfNotInfamousNoble]
-The noble refuses to help. Your animals are killed. The townspeople banish you.
+[FarmerWolfNotInfamousNoble1]
+You enter town and after your earnest entreaties to the magistrate, he sends a large contingent of his militia to return with you to the countryside. Upon arrival, a young stalwart militia captain begins to take charge and coordinate the division of the contingent into pairs. In a coordinated sweep, they take several passes through the forests, killing several wolves and driving the rest away. You return with the militia to report on the results, and the captain is lauded as a hero. That evening, a ceremony is to be arranged.
 <> Continue. [Neutral]
 ;
 
 
-[FarmerFenceDeadFamily]
-You cannot finish the fence in time and the townspeople blame you for ‘letting’ the wolves in.
-<> Continue. [Execution]
+[FarmerFenceDeadFamily1]
+You begin work on a fence that surrounds your whole property in an effort to stop the wolves from getting in. It is backbreaking work, and your family suffers at the absence of your eldest son. As your work continues over the following weeks, wolves have cunningly avoided you, and you have continued to lose livestock at an alarming rate.
+<> Continue. [FarmerFenceDeadFamily2]
 ;
 
 
-[FarmerFenceLiveFamily]
-You quickly complete the fence. You and your family are thanked for your hard work.
+[FarmerFenceDeadFamily2]
+One late evening, as you are working hard with your last living son, you see the glint of eyes moving on the forest’s edge. Coming forth from the shadows, you can see the pack of wolves, emboldened by their string of unchecked hunts. Knowing that your son could not outrun these beasts, you step forward to face the wolves, yelling to your son to run home as fast as possible. You will not lose another son today.
+<> Continue. [FarmerWolfDeath]
+;
+
+
+[FarmerFenceLiveFamily1]
+With the help of your family and neighbors, you manage to make short work of a sturdy fence about the perimeter of your property and then lead the charge doing similarly about the properties of your neighboring farmsteads.
+<> Continue. [FarmerFenceLiveFamily2]
+;
+
+
+[FarmerFenceLiveFamily2]
+With the success of the coordinated efforts, the villagers regard you as a valiant and heroic leader. The local magistrate calls on the knight in residence and arranges for a ceremony in your honor.
 <> Continue. [Knight]
 ;
 
 
 [FarmerExecution]
 You wake in a darkly lit chamber, the militia guard standing above you. You are kneeling on the ground, a sword descending from over your head. After reflecting back on your life, where it started, the choices you have made -- for good or evil your choices have led to this. Ritual Execution.
+<> Restart. [Start]
+;
+
+
+[FarmerWolfDeath]
+Valiantly, you battle the wolves using the sledgehammer you had been using to drive posts into the ground. You manage to injure several, but the weight of your weapon fatigues you and the wolves act in unrelenting coordination. One bite to the back of your leg brings you to your knees. As the largest of the wolves lunges and bites into your neck, you see the glint of a sword arcing through the air above your head, wielded by your son. The blade lands home in the back of the alpha wolf attacking you, and the other wolves disperse. As you look up into the eyes of your son, you know that you will not survive the night but feel strangely tranquil, knowing he is safe and will live on. Your son bows his head and whispers the Rites of Passage, through tears that flow from his eyes.
 <> Restart. [Start]
 ;
 
@@ -1302,7 +1325,7 @@ You travel several days towards the mountain ranges K’niggit talked about. Aft
 
 
 [SickBaronFollowKniggitP2]
-The next morning you begin your journey back to the town. When you finally arrive, you grind a mushroom into a paste, mixing it into boiling water with lime juice and a tobacco leaf. He is immediately overcome with a sense of relief as he takes the first sip of the pungent concoction. He praises you and Sir K’niggit’s hard work, and you watch Princess Amelia walk across the room towards you. She also thanks you, and leads you out of the hall to discuss your compensation, explaining her uncle needs time rest.
+The next morning you begin your journey back to the town. When you finally arrive, you grind a mushroom into paste, mixing it into boiling water with lime juice and a tobacco leaf. The baron is immediately overcome with a sense of relief as he takes his first sip of the pungent concoction. He praises you and Sir K’niggit’s hard work, and you watch Princess Amelia walk across the room towards you. She also thanks you, and leads you out of the hall to discuss your compensation, explaining her uncle needs time rest.
 <>Continue. [Knight]
 ;
 
@@ -1360,7 +1383,7 @@ You ride out to battle with a handful of fellow warriors. You arrive at the batt
 
 
 [SquireCallWinP2]
-A massive bandit stands in front of you, grinning at his new opponent. He lifts his sword above his head, and makes a swing that you just barely avoid. However, you notice just how slow this man is, and make a quick lunge at a new opening. He falls to the ground clutching his now heavily bleeding chest. You swing again, putting the bandit out of his misery. Many of the bandits were dead or dying, and few unscathed ones desperately scrambled into the nearby woods.
+A massive bandit stands in front of you, grinning at his newest victim. He lifts his sword above his head, and makes a swing that you just barely avoid. However, you notice just how slow this man is, and make a quick lunge at a new opening. He falls to the ground clutching his now heavily bleeding chest. You swing again, putting the bandit out of his misery. Many of the bandits were dead or dying, and few unscathed ones desperately scrambled into the nearby woods.
 <>Continue [SquireCallWinP3]
 ;
 

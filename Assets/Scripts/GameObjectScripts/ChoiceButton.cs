@@ -6,6 +6,7 @@ public class ChoiceButton : Button
 {
 	public string ChoiceText;
 
+	Slider slider;
 	Text textElement;
 	LayoutElement layoutElement;
 	protected override void Start()
@@ -13,11 +14,12 @@ public class ChoiceButton : Button
 		base.Start();
 		textElement = GetComponentInChildren<Text>();
 		layoutElement = GetComponent<LayoutElement>();
+		slider = GameObject.Find("ButtonTextSlider").GetComponent<Slider>();
 	}
-	// Update is called once per frame
 	void Update ()
 	{
 		textElement.text = ChoiceText;
 		layoutElement.preferredHeight = textElement.preferredHeight+10;
+		textElement.fontSize = (int)slider.value;
 	}
 }
