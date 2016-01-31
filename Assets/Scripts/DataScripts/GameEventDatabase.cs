@@ -62,8 +62,11 @@ public class GameEventDatabase : ScriptableObject
 		get
 		{
 			var events = database.Where(l => l.Key == key);
-			if (events == null)
+			if (events.IsNullOrEmpty())
+			{
 				Debug.LogError("There is no event with key [" + key + "]");
+				return this["TheGameBroke"];
+			}
 			var list = events.ToList();
 			return list[Random.Range(0, list.Count)];
 		}

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ChoiceButton : Button
 {
-	public string ChoiseText;
+	public string ChoiceText;
 
 	Text textElement;
 	LayoutElement layoutElement;
@@ -17,7 +17,7 @@ public class ChoiceButton : Button
 	// Update is called once per frame
 	void Update ()
 	{
-		textElement.text = ChoiseText;
-		layoutElement.preferredHeight = textElement.preferredHeight;
+		textElement.text = ChoiceText;
+		layoutElement.preferredHeight = textElement.preferredHeight+10;
 	}
 }

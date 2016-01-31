@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -22,9 +23,20 @@ public class Game : MonoBehaviour
 	void Start ()
 	{
 		_eventText = _textAreaScrollView.GetComponentInChildren<Text>();
+		if (_eventDatabase == null)
+		{
+			Debug.Log("GameEventDatabase not set, looking for one in resources.");
+			_eventDatabase = Resources.FindObjectsOfTypeAll<GameEventDatabase>().First();
+		}
+		if (_eventDatabase == null)
+			Debug.LogError("Unable to find a GameEventDatabase.");
 		GoToEvent("Start");
 	}	
-
+	IEnumerator UpdateScroll()
+	{
+		yield return null;
+		_textAreaScrollView.verticalNormalizedPosition = 0;
+	}
 	void GoToEvent(string key)
 	{
 		if (key == "Start")
@@ -32,7 +44,7 @@ public class Game : MonoBehaviour
 		var e = _eventDatabase[key];
 		_eventText.text = "<color=grey>" + _story.ToString() + "</color>\n" + e.Text;
 		_story.Append("\n"+e.Text);
-		_textAreaScrollView.verticalNormalizedPosition = 0;
+		StartCoroutine(UpdateScroll());
 
 		e.Flags.ForEach(f => _flags.Add(f));
 		for (int i = 0; i < _ChoicesArea.childCount; i++)
@@ -48,7 +60,7 @@ public class Game : MonoBehaviour
 
 			var o = opt;
 			var b = Instantiate(_choiceButtonPrefab);
-			b.ChoiseText = o.Text;
+			b.ChoiceText = o.Text;
 			b.onClick.AddListener(() => GoToEvent(o.Target));
 			b.transform.SetParent(_ChoicesArea, false);
 		}

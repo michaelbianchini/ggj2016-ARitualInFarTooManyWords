@@ -1,0 +1,1085 @@
+﻿[Start]
+As you are kneeling on the ground, a sword descends from over your head and you reflect back on your life, where it started, the choices you have made -- everything that has led to this Ritual you find yourself facing.
+
+
+Choose your Background
+<>Farmer Background Story
+The Farmer starts his life everyday by gathering the eggs from the chickens, milking the cows, and tilling the fields. On the whole this is a fulfilling and happy life however very mundane.[FarmerAtTournament]
+<>Orphan Background Story
+The Orphan never knew his family. His life has been tough and although he lives by his own code he believes himself to be a good man.[OrphanAtTournament]
+<>Gypsy Background Story
+The Gypsy being from a nomadic tribe has never understood how any person could live in only one place. Although he is becoming skilled at making stained glass which has brought his family wealth, with nothing to do with it he simply continues to travel through the world. [GypsyAtTournament]
+<>Noble Background Story
+The Noble by birth has had everything handed to him. He enjoys the life of luxury however being an inquisitive lad is always questioning the world around him. [NobleAtTournament]
+;
+
+
+[FarmerAtTournament]
+You have been taken to the Tournament by your parents to see the knights perform in the Joust and the Sword. Your father tells you how the knights participate in these events to hone their skills and to earn fame and glory.
+<> I say “when I grow up I want to be a just like those Knights!” [Squire]
+<> I say “Father, please take me home the swords are loud and I’m scared.” [Farmer]
+<> I say “Mother, take me to see the funny glass the man over there is making” [Craftsman]
+;
+
+
+[OrphanAtTournament]
+To make some coin you have taken a job mucking out the horse stalls at the tournament. It is gross and difficult work but it keeps you out of trouble, or at least that’s what the city guardsman who sent you here said.
+<> I make the best of the job given to me and as I am working a knight is watching me from across the stable yard. [Squire]
+<> I say “forget this” and decide to walk around the tournament when I bump into an Old Gypsy Woman. [Craftsman]
+<> I decided I would rather die than do this nasty work anymore and kick the guard in the shin before I run down an alley to get away from everyone and everything. [Destitute]
+ ;
+
+
+[GypsyAtTournament]
+You have been learning to make the stained glass windows the same way your father made them which is the same way you grandfather made them, etc. This has taught you to appreciate the art in things but yet you wonder what other things life could bring to you.
+<>While I was working with my father I see that a man with his wife and son have come to see the glass. They have dirt on their hands and smell of manure but are kind and even though I knew they could not afford the stained glass I give the woman a small glass window hanging anyway. [Farmer]
+<> I ask my grandmother for advice on why she chose to travel and make stained glass instead of settling down somewhere. Her answer is because the only way to make their glass the best, was to see the beauty of the whole world from the smallest flower to the biggest mountain. [Craftsman]
+<> I ask my father for a little spending money and permission to take a break and go watch the tournament for a while. He says ok, and as I am coming around to the side of the sword fighting ring I am approached by a young nobleman who asks me to place a bet. [Destitute]
+;
+
+
+[NobleAtTournament]
+You have been sitting on the cushions your manservant has laid down for you to watch the Tournament from, in the Nobles box. You are enjoying yourself but have decided to go for a walk around the Tournament grounds.
+<> I order a knight that I am not familiar with to tell me about his adventures. He tells me that if I expect him to have a civilized discussion with me, that I would do well to stop demanding things of him. I am taken aback but instantly am in love with the idea that I can find out more information if I follow this man and his rules. [Squire]
+<> I am walking around near the Sword arena when a wealthy gypsy boy crosses my path. I decide to ask him if he wants to wager on the current match. [Destitute]
+;
+
+
+[Destitute]
+You Died! Your Princess is in Amelia’s Castle! Next time try Down, Down, Up, Up, Right, Left, Right, Left, A, B, Select!
+<> Restart. [Start]
+;
+
+
+[Craftsman]
+At the Tournament you fall in love with the idea of making something you are passionate about and selling it around the world. The Gypsy’s have their stained glass but it doesn’t feel like that is something you would like. You look to find what you’re passionate about…
+<> I have seen many items that people have made to sell, but the one thing I don’t see are toys for children. If I make something that bring joy to children I think my craftsmanship will be we rewarded. [Toymaker1Exp]
+<> I see one thing that all the knights at the tournament did, which was carry a ton of equipment in a cart with them. If I learn the blacksmithing trade maybe I can make a way to travel to each tournament and act as an on-site blacksmith. [Blacksmith1Exp]
+<> I don’t seem to be good with making things by hand but I love to make people laugh or cry with a flick of my tongue. I have decided to follow a new playwright by the name of Rattlespike and act in his plays. [Actor1Exp]
+;
+
+
+[Toymaker1Exp]
+You have learned the basics of carving wood and now you are able to make recognizable trinkets that will interest children. As you travel from village to village you delight in seeing the joy in the local children’s eyes as they play with their little dolls or miniature “Hot Wagons”, not to mention your pockets that are now being lined by their parent’s money.
+<> Continue. [ToymakerRandomOption]
+;
+
+
+[ToymakerRandomOption] I watch as a little boy today run his new “Hot Wagon” off the edge of the town well, he just laughed and laughed.
+<> Continue. [Toymaker1]
+;
+
+
+[ToymakerRandomOption] I observe a little girl ask her mother to buy her one of my dolls. Her mother sadly has to turn her down.
+<> Continue. [Toymaker2]
+;
+
+
+[Toymaker1]
+<> I laughed along with the boy as he does this over and over. [Toymaker2Exp]
+<> I enjoy watching the boy play with his “Hot Wagon” toy. [Toymaker2Exp]
+<> I help the boy since he has dropped his “Hot Wagon” in the well. [Toymaker2Exp] 
+;
+
+
+[Toymaker2]
+<> I have had a very lucrative week so I pull the mother aside and tell her to choose any doll her daughter wants, on the house. [Toymaker2Exp]
+<> I apologize I cannot offer the girl the doll she likes, however I follow the family home and leave the doll on the stoop, from an “Anonymous Friend”. [Toymaker2Exp]
+<> I determine that the materials I use for my dolls is too hard to come by, which is the reason why my prices are so high, I will need to be change out this type of wood for a more easily found material so next time the girls mother will be able to get a doll. [Toymaker2Exp]
+;
+
+
+[Toymaker2Exp]
+Your craft brings you a lot of joy so you have decided to have a bit of fun. As you close shop for the day you decide to go to the local pub.
+<> After seeing the crowd, I buy the house a few rounds, 1 Whiskey, 1 Mulled Wine, and 1 Ale. [CraftsmanAdulthood]
+<> After downing a few rounds at the pub, I tripped over a stool leg and run straight into a bar wench, face first. [CraftsmanAdulthood]
+<> Drinking heavily tonight, I pass out on my bar stool. [CraftsmanAdulthood]
+;
+
+
+[Blacksmith1Exp]
+You now know your craft well. After apprenticing under the King’s Royal Blacksmith, however now it’s time to take your craft on the road. 
+<> Continue. [BlacksmithRandomOption]
+;
+
+
+[BlacksmithRandomOption] 
+You have a few knights who have begun to trust your Quikset Blacksmithing Stand (patent pending). 
+<> I offer half price to new clients.[Blacksmith2Exp]
+<> I decide to make my core customers my only customers and focus more on their needs. [Blacksmith2Exp]
+<> I hire a troubadour to sing a song in his travels about my stand. [Blacksmith2Exp] 
+;
+
+
+[BlacksmithRandomOption] 
+You have yet to find a way to make swords or armor for knights on the go and this now leaves you stuck in a town that only has a tournament once every other year. 
+<> I push to find a way to make my metals stronger but lighter to make them more portable. [Blacksmith2Exp]
+<> I discover a way to build a cart that can house my hammer and anvil without requiring any unloading which leaves the only thing to build, at each site, my furnace.  [Blacksmith2Exp]
+<> I find that if I rent space from a local blacksmith in each tournament location I can continue to follow my customers without the burden of carrying large amounts of equipment. [Blacksmith2Exp]
+;
+
+
+[Blacksmith2Exp]
+While traveling between tournament locations you have found a vein of metal ore that you have never seen before. You call this new metal ifoundium.
+<> I make this metal work in ways I never dreamed and find a way to make armor stronger than plate mail and lighter than your average tunic. [CraftsmanAdulthood]
+<> I have turned this metal into something hard for me to describe, it is strong for sure but after it sets it seems to glow. [CraftsmanAdulthood]
+;
+
+
+[Actor1Exp]
+You have traveled the countryside in tow of the great William Rattlespike himself. He teaches you a lot about life and love. Although you will never understand why he insists on only hiring men to be in his plays, even for female roles.
+<> Continue. [ActorRandomOption] 
+;
+
+
+[ActorRandomOption] You have been cast to play the role of a lifetime. You will be Romero, the main title character in Rattlespike’s new play, “Romero & Jewel.” However your buddy Quinto will play the role of Jewel.
+<> I’m uncomfortable that Jewel is being played by my buddy Quinto, and refuse to participate in the play. [Actor11]
+<> I try to convince Rattlespike to hire a woman to play the part of Jewel. [Actor12]
+<> I’m excited to have the opportunity to work alongside my friend. [Actor13]
+;
+
+
+[ActorRandomOption] Rattlespike has asked me to manage his new village theater.
+<> I make a decision that causes large repairs to be required [Actor21]
+<> I hire a new actor [Actor22]
+<> I produced the new play that Rattlespike has sent to me It is called Romero & Jewel [Actor23] 
+;
+
+
+[Actor11] 
+Rattlespike is furious, and you begin to question your pursuit of the performing arts. The show goes on without me and is a great success. 
+<> Continue. [Actor2Exp]
+;
+
+
+[Actor12] 
+He Agreed, at least now I won’t need to kiss Quinto.
+<> Continue. [Actor2Exp]
+;
+
+
+[Actor13] 
+In the opening scene I fell off the edge of the stage, flat on my face.
+<> Continue. [Actor2Exp]
+;
+
+
+[Actor21]
+ The theater literally falls apart.
+<> Continue. [Actor2Exp]
+;
+
+
+[Actor22] 
+The Actor tried to take my job out from under me.
+<> Continue. [Actor2Exp]
+;
+
+
+[Actor23] 
+This was a huge success!
+<> Continue. [Actor2Exp]
+;
+
+
+[Actor2Exp]
+The Baron and his niece the Princess Amelia are coming to the theater. They want to see the now famous rendition of Romero & Jewel. Rattlespike himself is coming to take care of the direction so you can again reprise your role as Romero.
+<> After all these years I fumble my first line. I am so embarrased and I can see Rattlespike shaking his head. [CraftsmanAdulthood]
+<> The Baron paid a stipend to Rattlespike to get his niece Princess Amelia the part of Jewel... Much to my excitement. [CraftsmanAdulthood]
+<> I receive the highest honor an award from the king for my performance as Romero. [CraftsmanAdulthood]
+;
+
+
+[CraftsmanAdulthood]
+After applying your craft it is time to unwind. You go to the villages watering hole where after your successful day you buy a round for the house. After a good round of drinks you feel something is off. As you turn around you fall face first into the bosom of the bar wench. All of a sudden the entire pub is in an uproar.
+<>Continue. [CraftsmanInitialEvent1]
+;
+
+
+[CraftsmanInitialEvent1]
+You stand upright and try to apologize but as you turn, you accidentally knock into a ruffian who instantly spills his Mulled Wine all over a guy with the missing arm.
+<> Continue. [CIE2]
+;
+
+
+[CIE2]
+Now punches are being thrown left and right. You see a sword flash through the air in front of you, an axe flies by your right ear, the whole place seems to be taking this error far too seriously for an innocent mistake
+<> Continue. [CIE3]
+;
+
+
+[CIE3]
+You try fighting back at least so you won’t die, but this entire brawl is getting way out of control. At one point you thought you saw a Princess run past with a dragon in tow. Pfft. That can’t be right, dragons don’t frequent bars.
+<> Continue. [CIE4]
+;
+
+
+[CIE4]
+You are doing your best not to die in this mess and you have had a few extremely close calls when you notice how people are generally placed around the bar.
+<> I make a break for the door. [CIEChoice1] [CiEEscape]
+<> I dive behind the bar. [CIEChoice2]
+;
+
+
+[CIEChoice1]
+As you are running towards the door you trip over a brute in a uniform. As you look up into his eyes to see the local constable who yells “Arrest this heathen for disturbing the peace!” As he knocks up upside the head with his club knocking you out cold. 
+<> Continue. [Execution] 
+;
+
+
+[CiEEscape]
+As you head back to your cart narrowly escaping from the bar you notice the town smells like someone was having a campfire. Oh well, tomorrow you move on to bigger and better things.
+<> Continue. [CraftsmanRandom]
+;
+
+
+[CIEChoice2]
+Just as yet another swing of a chair goes past my shoulder. As you cower here, Ironically next to the bar wench that you first bumped into, you apologize to her for the fall and the resulting brawl. She forgives you and tells you that even if it wasn’t you that caused the brawl it would have happened anyway, one happens every night.
+<> Continue. [CraftsmanRandom]
+;
+
+
+[CraftsmanRandom]
+A massive shortage of food and water has hit the area in which you a currently staying. There is the slight ripeness of a busy towns worth of people exuding their stench all over due to the lack of the local stream for them to bathe in.
+<> I try to apply my craft to entice the local farmers into attempting to obtain some food from them. [CMFFarmer1]
+<> When I visit the local Baron’s home, he even refuses for purchase from me. [CMFNoble1]
+<> Give up on this Famine ridden town and move towards the city [CMFRunAway]
+;
+
+
+[CMFNoble1]
+:While you are at the Baron’s estate he discusses with you that even he is running out of food and cannot get his brother the King to respond to him. 
+<> I go back into town and tell the people to leave, the Baron cannot help them due to lack of help from the King. [CMFNeutralEnd2] 
+<> I go back to town and let the bad news fall that we are all. [CMFNeutralEnd]
+;
+
+
+[CMFFarmer1]
+You are trying to sell your craft to the local farmers as a last desperate attempt to obtain some food before leaving this town to die.
+<> The local farmer I am dealing with, just won’t budge. He tries saying something about Dragon Dung but I can’t see why it’s important. [CMFNeutralEnd]
+<> I just tell this bumbling farmer to stop. I can see I am not getting anywhere and at this point I would rather just start moving on. [CMFNeutralEnd]
+;
+
+
+[CMFNeutralEnd]
+Without the help from the nobles or the farmers this land is destined to fail. You guess it is time to move on. 
+<> Continue. [CraftsmanUnique]
+;
+
+
+[CMFNeutralEnd2] {MadBaron}
+Without the help from the nobles or the farmers this land is destined to fail. You guess it is time to move on. 
+<>Continue. [CraftsmanUnique]
+;
+
+
+[CMFRunAway] {Shop}
+You feel guilty, but you won’t survive if you don’t move to an area not affected by this Famine.
+<> Continue. [CraftsmanUnique] 
+;
+
+
+[CraftsmanRandom]
+Bandits Attack the world goes on
+<> Continue. [CraftsmanUnique]
+;
+
+
+[CraftsmanUnique]
+Your craft has brought you far in life.
+<BS> Continue. [BSUnique]
+<TM> Continue. [TMUnique]
+<Act> Continue. [ActUnique]
+;
+
+
+[BSUnique]
+You have made a name for yourself throughout the realm for your amazing LTA (Lighter Than Air) Armor. Even your liege marvels at its beauty. When you're asked about the material all you say is it is called “Ifoundium”.
+<Shop> I sell this glowing magic metal to the clergy for all of their new deity statues. [BSNeutralEnd]
+<MadBaron> I attempt to sell a set of armor to the Baron and say “my lord, it looks like you have lost some weight.”[BSExecutionEnd]
+<> My Liege Lord is so pleased with my armor he has asked me to make some from every member of his court. [BSKnight]
+;
+
+
+[BSNeutralEnd]
+temp
+<> Restart [Start]
+;
+
+
+[BSExecutionEnd]
+temp
+<> Restart [Start]
+;
+
+
+[BSKnight]
+temp
+<> Restart [Start]
+;
+
+
+[TMUnique]
+temp
+<> Restart [Start]
+;
+
+
+[TMNeutralEnd]
+temp
+<> Restart [Start]
+;
+
+
+[TMExecutionEnd]
+temp
+<> Restart [Start]
+;
+
+
+[TMKnight]
+temp
+<> Restart [Start]
+;
+
+
+[ActUnique]
+temp
+<> Restart [Start]
+;
+
+
+[ActNeutralEnd]
+temp
+<> Restart [Start]
+;
+
+
+[ActExecutionEnd]
+temp
+<> Restart [Start]
+;
+
+
+[ActKnight]
+temp
+<> Restart [Start]
+;
+
+
+[Farmer]
+After the tournament, things have changed the way you feel about your life. You have decided that the humble life of a farmer is all you have ever wanted, but now you find that your choice has also come with a lot of hard work.
+<> I have been gathering eggs each morning from my first chicken Henrietta. They are small and unfertilized so they don’t sell for much, but I sell them for whatever the baker in the village is willing to buy them for. [Eggs1]
+<> I have been milking Bertha my cow and I still feel like this is a weird process. I wonder who was the first person to think, let me pull on that cow’s downstairs and see what happens. The milk is sweet, but my job well done is sweeter. [Milk1]
+<> I have been tilling the 20 acre field I was able to purchase to start my own farm. My hands are blistered, and I don’t think the dirt will ever come off. I hope that come fall my harvest with be bountiful after all this. [Tilling1]
+;
+
+
+[Tilling1]
+You have gotten your farm off the ground and going strong. It looks like you will be able to feed your family through the entire winter this year, since you were able to purchase that additional 40 acres.
+<> I had to buy 3 horses and hire 2 farm hands just to get this new 40 acres tilled. [TillingsOption1]
+<> I know that a horse would get this field tilled quicker, but if I do it by hand, I can afford to expand and maybe get a chicken or a cow. [Eggs2][Milk2]
+<> I bought a horse named Mr. Ted and got to tilling -- that’s tilling, not talking. [TillingsOption3]
+;
+
+
+[Tilling2]
+You have gotten your farm off the ground and going strong. It looks like you will be able to feed your family through the entire winter this year since you were able to purchase that additional 40 acres.
+<> I had to buy 3 horses and hire 2 farm hands just to get this new 40 acres tilled. [TillingsOption1]
+<> I know that a horse would get this field tilled quicker but if I do it by hand I can expand and maybe get a chicken or a cow... [TillingsOption2]
+<> I bought a horse named Mr. Ted and got to tilling, that tilling not talking. [TillingsOption3]
+;
+
+
+[TillingsOption1]
+Come fall I will have a full crop and it looks like full bellies too.
+<> Continue. [FarmersAdulthood]
+;
+
+
+[TillingsOption2]
+or maybe not. 
+<> Continue. [FarmersAdulthood]
+;
+
+
+
+
+[TillingsOption3]
+I am tired after all the hard work, but it looks like me and the wife won’t go hungry this year. 
+<> Continue. [FarmersAdulthood]
+;
+
+
+[Eggs1]
+Your Henrietta has been a great help in adding an additional influx of money. She is putting out 4 or 5 eggs per day which means you could actually sell a dozen to the baker at the end of the week and possibly still have breakfast on top.
+<> I purchased a new rooster instead.[EggsOption1]
+<> I have been eating like a king with omelets and scrambled eggs galore. [EggsOption2] 
+<> I have decided to move Henrietta into the house with me and the wife to give her better protection (and so when winter comes I don’t have to go outside to get her eggs). [Milk2][Tilling2] 
+;
+
+
+[Eggs2]
+Your Henrietta has been a great help in adding an additional influx of money. She is putting out 4 or 5 eggs per day which means you could actually sell a dozen to the baker at the end of the week and possibly still have breakfast on top.
+<> I spent the money that I needed to build a better hen house on a new rooster instead. [EggsOption1]
+<> I have been eating like a king with omelets and scrambled eggs galore. [EggsOption2] 
+<> I have decided to move Henrietta into the house with me and the wife to give her better protection (and so when winter comes I don’t have to go outside to get her eggs). [EggsOption3] 
+;
+
+
+[EggsOption1] 
+I think this will help get that better pricing on Henrietta’s eggs if I sell them fertilized to the baker. 
+<> Continue. [FarmersAdulthood]
+;
+
+
+[EggsOption2] I think in retrospect that I might be short on the bakers order. 
+<> Continue. [FarmersAdulthood]
+;
+
+
+[EggsOption3] Maybe I should buy a cow to get some milk or perhaps learn to till my land, although that might be a bit excessive. 
+<> Continue. [FarmersAdulthood]
+;
+
+
+[Milk1]
+Everybody in the village is asking about your cow Bertha. She was pregnant when she was sold to you, and now she just gave birth to a calf. You’re considering that after the calf is grown you may get some steaks out of Bertha, but you might get some backlash from the neighbors.
+<> Bertha just gave birth, and it looks like next year I will have 2 milk-giving cows. [Milk1Option1] 
+<> But I don’t have room for 2 cows so I will have to sell the calf off. [MilkOption2]
+<> Bertha’s calf was born lame and cannot survive on it’s own. [MilkOption3]
+;
+
+
+[Milk2]
+Everybody in the village is asking about your cow Bertha. She was pregnant when she was sold to you, and now she just gave birth to a calf. You’re considering that after the calf is grown you may get some steaks out of Bertha, but you might get some backlash from the neighbors.
+<> Bertha just gave birth, and it looks like next year I will have 2 milk-giving cows. [MilkOption1] 
+<> Bertha had a calf it was healthy and strong. [MilkOption2]
+<> Bertha’s calf was born lame and cannot survive on it’s own. [MilkOption3]
+;
+
+
+[Milk1Option1] 
+Now, if I can get a hold of a good rooster, I can start getting fertilized eggs or maybe buy that 40 acres next door and start growing crops.
+<> Continue. [Eggs2] [Tilling2]
+;
+
+
+[MilkOption1] 
+Now, if I can get a hold of a good rooster, I can start getting fertilized eggs or maybe buy that 40 acres next door and start growing crops. That said, I think I’d rather not. 
+<> Continue. [FarmersAdulthood]
+;
+
+
+[MilkOption2] But I don’t have room for 2 cows so I will have to sell the calf off. 
+<> Continue. [FarmersAdulthood]
+;
+
+
+[MilkOption3] I can’t afford to house 2 cows at this point especially 1 that’s lame. At least veal steaks will go good with morning milk. 
+<> Continue. [FarmersAdulthood]
+;
+
+
+[FarmersAdulthood]
+Your family has grown significantly. You now have 2 sons to help on the farm, your wife is pregnant with a 3rd, and the villagers all know who to come to with their farming needs. Life on the whole for you has been good but something foul is in the air...
+<>Continue. [FarmerInitialEvent1]
+;
+
+
+[FarmerInitialEvent1]
+As you are working diligently tilling your cornfields one sweltering afternoon, a shadow suddenly passes across the breadth of your land, sending a chill down your spine as it rapidly moves toward the hills in the direction of the nearby village. As you look skyward, a massive wingspan looms above you, but you have no time to consider this as your eyes are instead drawn to some other object in the sky, growing alarmingly.
+<> Continue. [FarmerInitialEvent2]
+;
+
+
+[FarmerInitialEvent2]
+You realize that this peat-black mass is in fact hurtling in the direction of your field, and straight for you! You scramble to get out of the way as it crashes to the earth, sending chunks of thick, steaming hot sludge streaming through the air, showering you with filth mixed amongst remnants of your crops. The stench is at once familiar and foreign. You distinctly recognize the smell of rich manure, but the odor is tainted by a peculiar, pungent basenote of sulfur.
+<> Continue. [FarmerInitialEvent3]
+;
+
+
+[FarmerInitialEvent3]
+As you think back to the winged shadow, it dawns on you that your field has been bombarded by the excrement of a dragon. As you wipe at the caustic muck that now cakes your hair, you begin to catch your breath and take stock of the situation, formulating a plan of how you will handle this boulder that now looms above the tops of your rows of corn.
+<> I spread the material across my land. [FarmerManure1]
+<> I roll the mound down to the river to let it disperse downstream. [FarmerPollution1]
+<> I seek the village elders for their advice. [FarmerTreasure1]
+;
+
+
+[FarmerManure1]
+You see this occurrence as a blessing in disguise and gather your boys, setting to work shoveling the dark material into a cart. You trust that this rare natural dung is filled with nourishment that will fortify your crops and bring you a bountiful harvest. With your cart you are able to bring it to the farthest reaches of your land. It takes you and your boys several days, but at last, the oozing boulder has been diminished and your land fertilized.
+<> Continue. [FarmerManure2]
+;
+
+
+[FarmerManure2]
+As the weeks go by, a chilling realization becomes undeniable. Contrary to your expectations, the dragon manure has had a devastating effect on every one of your fields. Leaves turned red, then brown and curled to dust. Formerly healthy growths fell to the earth and shed their skins. Even your livestock have begun to look sickly. By the time these effects were seen, it was far too late to reverse the effects. You and your family take inventory of what little food stocks remain in storage.
+<> Continue. [FarmerFamine1]
+;
+
+
+[FarmerPollution1]
+You gather your boys and your oxen, together rolling the boulder of dung down to the nearby river’s edge. You ford your way to the middle of the river and as the water softens the reeking black mass, you shovel it into the current to be taken away. This goes on well after dark, but at last you have reduced the mound to a memory.
+<> Continue. [FarmerPlague1]
+;
+
+
+[FarmerTreasure1]
+The fallen mound of muck has left you jarred and disoriented. You cannot fathom the implications of what has happened, and after consulting with your wife, you decide to seek advice from the village elders. You set out the next morning, making your way down the long road toward town. As you near, you notice several pillars of billowing smoke rising from one of the town districts. However, your destination does not bring you close enough to find the sources, heading instead toward a stone lodge on the edge of town.
+<> Continue. [FarmerTreasure2]
+;
+
+
+[FarmerTreasure2]
+After explaining what has befallen your farm to the room full of old, leathery men and women, they retreat to an inner chamber to confer privately amongst themselves. When at last they return to the audience room, the eldest man steps forward and speaks to you of a rare and valued mushroom that only grows on the caustic excrement of a fire-breathing dragon. This mushroom is said to be used for numerous purposes, including powerful healing potions and poultices, adhesive, and has even been used as a secret ingredient in a strong brew of stout. He entreats you to keep the dung in a dark and isolated environment, far from any sources of food or water.
+<> Continue. [FarmerTreasure3]
+;
+
+
+[FarmerTreasure3]
+With this information, you return home and haul the boulder of dragon manure into one of your old and unused barns, sealing the door afterwards. With any luck, this fateful encounter may just bring your family some wealth and prosperity.
+<> Continue. [FarmerBanditAttack1]
+;
+
+
+[FarmerFamine1]
+Months go by, and the desolation of farmland has not stopped at the borders of your property. Winds and rain have apparently taken the poison and spread it across the surrounding countryside, resulting in what has become a serious famine. One day, the local militia come to visit your farmstead, explaining that a state of emergency has been declared and that by martial order you are to yield up all food stores that remain.
+<> Tell them you have no food to spare. [FarmerFamineDenial1]
+<> Offer up most of your stored food. [FarmerFamineYield1]
+<> Defend your food stores. [FarmerFamineDefend1]
+;
+
+
+[FarmerFamineDenial1] {infamous}
+Militia leaves, but is defeated by bandits, leaving your town undefended.
+<> Continue. [FarmerUniqueEvent1]
+;
+
+
+[FarmerFamineYield1] {familyisdead}
+Offer up most of your stored food.
+<> Continue. [FarmerUniqueEvent1]
+;
+
+
+[FarmerFamineDefend1]
+Defend your food stores.
+<> Continue. [Execution]
+;
+
+
+[FarmerPlague1]
+A member of your town has contracted the plague.
+<> Banish him. [FarmerPlagueBanish1]
+<> Kill him with fire. [FarmerPlagueKill1]
+<> Let him live isolated from other townspeople. [FarmerPlagueIsolation1]
+;
+
+
+[FarmerPlagueBanish1]
+The town is fine, his family is pissed.
+<> Continue. [FarmerUniqueEvent1]
+;
+
+
+[FarmerPlagueKill1] {infamous}
+His family is mega-pissed.
+<> Continue. [FarmerUniqueEvent1]
+;
+
+
+[FarmerPlagueIsolation1] {familyisdead}
+Him and his family don’t listen. Many members of the town contract the plague, including your family, who die.
+<> Continue. [FarmerUniqueEvent1]
+;
+
+
+[FarmerBanditAttack1]
+A group of bandits demand your town hand over their supplies and valuables.
+<> Fight the bandits. [FarmerBanditFight1]
+<> Offer up your magic mushrooms (and food). [FarmerBanditYield1]
+<> Negotiate with the bandits. [FarmerBanditNegotiate1]
+;
+
+
+[FarmerBanditFight1]
+Bandits are pussies, but you win and people think that’s pretty cool.
+<> Continue. [FarmerUniqueEvent1]
+;
+
+
+[FarmerBanditYield1] {familyisdead}
+Bandits leave, but one of your children dies of starvation.
+<> Continue. [FarmerUniqueEvent1]
+;
+
+
+[FarmerBanditNegotiate1] {infamous}
+You have to make some underhanded deals. Word gets around and you’re hated for the cartel you help fuel.
+<> Continue. [FarmerUniqueEvent1]
+;
+
+
+[FarmerUniqueEvent1]
+A group of bandits demand your town hand over their supplies and valuables.
+<infamous> You try to rally the townspeople to drive them off. [FarmerWolfInfamousFight]
+<!infamous> You try to rally the townspeople to drive them off. [FarmerWolfNotInfamousFight]
+<infamous> You ask help from the local noble to deal with the threat. [FarmerWolfInfamousNoble]
+<!infamous> You ask help from the local noble to deal with the threat. [FarmerWolfNotInfamousNoble]
+<familyisdead> You try to build a fence around your property. [FarmerFenceDeadFamily]
+<!familyisdead> You try to build a fence around your property. [FarmerFenceLiveFamily]
+;
+
+
+[FarmerWolfInfamousFight]
+The townspeople refuse. You have to attempt to stop them yourself. You fail, and they arrest you for ‘letting’ the wolves kill the animals.
+<> Continue. [Execution]
+;
+
+
+[FarmerWolfNotInfamousFight]
+The townspeople rally and thank you for your efforts.
+<> Continue. [Knight]
+;
+
+
+[FarmerWolfInfamousNoble]
+The noble has heard of your misdeeds and arrests you.
+<> Continue. [Execution]
+;
+
+
+[FarmerWolfNotInfamousNoble]
+The noble refuses to help. Your animals are killed. The townspeople banish you.
+<> Continue. [Neutral]
+;
+
+
+[FarmerFenceDeadFamily]
+You cannot finish the fence in time and the townspeople blame you for ‘letting’ the wolves in.
+<> Continue. [Execution]
+;
+
+
+[FarmerFenceLiveFamily]
+You quickly complete the fence. You and your family are thanked for your hard work.
+<> Continue. [Knight]
+;
+
+
+[Squire]
+The Tournament is now past and you decide to pursue your dream of becoming a knight. The Winner of the Tournament Sir K’niggit takes you under his wing and though he is a tough task master you can see that you’re on your way to greatness, now don’t screw it up.
+<> Sir K’niggit has taught me a lot about how to hold a sword and how to swing a sword but he still won’t let me have a sword. It’s frustrating and slow but he says that I have potential and my time will come. [Sword1]
+<> I have been announcing Sir K’niggit at every town hall or party that he is asked to appear at. Today a very nervous town steward asks us to come quick because he has an URGENT matter in which he needs Sir K’niggit to attend to, however has refused to give any further detail. [Dragon1]
+<> I am following this Sir K’niggit who claims he is the best, but every time he does something that is slightly interesting we hurry away before anyone can even pat him on the back. This Baron however has finally demanded we come to his castle to be properly thanked for Sir K’niggits most recent accomplishment. [Princess1]
+;
+
+
+[Sword1]
+Sir K’niggit has finally recognized you can handle yourself with a sword and has given you a wrapped gift. It sure looks like a sword. You hope this isn’t another of his silly tricks.
+<> I received a real sword from Sir K’niggit! Of course it’s his old practice sword, so it’s nicked up and is definite need of a good stropping but it’s finally a real sword. [SquireAdulthood]
+<> I am the butt of Sir K’niggits “humor” once again and receive a shiny stick, at least he tied a less shiny stick near where a cross guard should be. Maybe I can practice against a twig and see who wins. [SquireAdulthood]
+<> Sir K’niggit really came through. He finally gives me a sword worthy of a knight. Also, I am  starting to practice with him for an hour each evening before we make camp. [Princess2][Dragon2]
+;
+
+
+[Sword2]
+Sir K’niggit has finally recognized you can handle yourself with a sword and has given you a wrapped gift. It sure looks like a sword. You hope this isn’t another of his silly tricks.
+<> I received a real sword from Sir K’niggit! Of course it’s his old practice sword so it’s nicked up and is definite need of a good stropping but it’s finally a real sword. [SquireAdulthood]
+<> I was just the butt of Sir K’niggits “humor” once again and received a shiny stick, at least he tied a less shiny stick near where a cross guard should be. Maybe I can practice against a twig and see who wins. [SquireAdulthood]
+<> Sir K’niggit really came through. He finally gave me a sword worthy of a knight. Also, I am to start practicing with him for an hour each evening before we make camp. I just hope I don’t die or embarrass myself first. [SquireAdulthood]
+ ;
+
+
+[Princess1]
+The Baron is actually a very nice man he has treated you to a feast in Sir K’niggits honor. Now the Baron is the brother to the King and as a treat he had invited his niece the Princess Amelia to the festivities. She is very pretty and of course you decide this is the best time to make a fool of yourself.
+<> I see the Princess Amelia across the banquet hall from me. She is as beautiful as the Sun’s rays lighting up and reflecting the morning dew off the orchids in the garden. So what is my first move? Of course, trip over my tunic. [SquireAdulthood]
+<> The Princess Amelia acts a bit out of character and asks me to dance. Sir K’niggit who is nearby nudges me in the back and whispers “Do it or you’ll regret it”. [SquireAdulthood]
+<> All is well. I have caught the eye of Princess Amelia, Sir K’niggit has gave me his blessing to enjoy myself and I have taken the Princess on a walk in the garden. While walking I start to tell her a story. [Sword2][Dragon2]
+;
+
+
+[Princess2]
+The Baron is actually a very nice man he has treated you to a feast in Sir K’niggits honor. Now the Baron is the brother to the King and as a treat he had invited his niece the Princess Amelia to the festivities. She is very pretty and of course you decide this is the best time to make a fool of yourself.
+<> I see the Princess Amelia across the banquet hall from me. She is as beautiful as the Sun’s rays lighting up and reflecting the morning dew off the orchids in the garden. So what is my first move? Of course, trip over my tunic. [SquireAdulthood]
+<> The Princess Amelia acts a bit out of character and asks me to dance. Sir K’niggit who is nearby nudges me in the back and whispers “Do it or you’ll regret it”. [SquireAdulthood]
+<> All is well. I have caught the eye of Princess Amelia, Sir K’niggit has gave me his blessing to enjoy myself and I have taken the Princess on a walk in the garden. While walking I start to tell her a story. However we are interrupted… [SquireAdulthood]
+;
+
+
+[Dragon1]
+While walking down the path with Sir K’niggit a small creature falls from the sky. You recognize it as a dragon, it is very small so it must not be older than 2 or 3 months. Sir K’niggit tells me to stay back but…
+<> I decided to grab a practice sword from our cart and before Sir K’niggit can say “What are you going to fight a dragon”, I have cut the creature down. [SquireAdulthood]
+<> I cannot help to feel that there is no reason to kill this young dragon and ask Sir K’niggit if we can spare him. [SquireAdulthood]
+<> Sir K’niggit says “Grab a sword from the cart and I will teach you how to take down a dragon”. [Sword2][Princess2]
+ ;
+ 
+[Dragon2]
+While walking down the path with Sir K’niggit a small creature falls from the sky. You recognize it as a dragon, it is very small so it must not be older than 2 or 3 months. Sir K’niggit tells me to stay back but…
+<> I decided to grab a practice sword from our cart and before Sir K’niggit can say “What are you going to fight a dragon” I have cut the creature down. [SquireAdulthood]
+<> cannot help to feel that there is no reason to kill this young dragon and ask Sir K’niggit if we can spare him. [SquireAdulthood]
+<> Sir K’niggit says “Grab a sword from the cart and I will teach you how to take down a dragon”. Hopefully I make Sir K’niggit proud. [SquireAdulthood]
+;
+
+
+[SquireAdulthood]
+You see a shadow fly overhead. The villagers gasped and retreated into their homes. Sir K’niggit stood at attention, unsheathed his sword, and you dashed to his side. So far following him has been great, but now the true battle begins…
+<>Continue. [SquireInitialEvent1]
+;
+
+
+[SquireInitialEvent1]
+A strong gust of wind starts blowing and you nearly lose your balance. After lifting your head, you see a massive red dragon landing at the other end of town. The dragon takes in a massive breath, and in just a few seconds, engulfed multiple buildings in flames. The screams from the villagers quickly fill your ears. You watch K’niggit dash towards the massive red monster.
+<> Continue. [SquireInitialEvent2]
+;
+
+
+[SquireInitialEvent2]
+Many of the villagers are trapped, and you are sure you could quickly free many of them. However, even as such a skilled fighter, could Sir K’niggit take on a massive beast like that single handedly? You have to make a decision quickly.
+<> I follow Sir K’nggit and provide backup. [SquireFollowKniggit]
+<> I run to the closest buildings and start freeing villagers. [SquireBurningBuildings]
+;
+
+
+[SquireFollowKniggit]
+You chase after K’niggit. If he was killed, the dragon could completely destroy the village. You watch the dragon take in another breath and unleash a colossal fireball in your direction. You have plenty of time to avoid it, but lose sight of K’niggit in the process!
+<> Continue. [SquireFollowKniggitP2]
+;
+
+
+[SquireFollowKniggitP2]
+The dragon turns to it’s left to smash a nearby building. You spot an opening under his front right leg. But without K’niggit, you know you could quickly be turned to toast.
+<>I stabbed at the dragons opening. [SquireAttackedFirst]
+<>I fell back to wait for another chance. [SquireWaitedToAttack]
+;
+
+
+[SquireBurningBuildings] {knightrenowned, kniggitdead}
+You immediately dash to the closest burning building. You see an older man with a small child, desperately trying to climb out of a window. You smash windows, reaching in and pulling them out, almost throwing them out of the building.
+<>Continue [SquireBurningBuildingsP2]
+;
+
+
+[SquireBurningBuildingsP2]
+You run over to the next building, breaking through the front door. You see a young woman passed out near the staircase to the upper landing. Picking her up, you run outside and drop her next to the old man from earlier. A macabre roar breaks the shrill voices of dying villagers.
+<>Continue [SquireBurningBuildingsP3]
+;
+
+
+[SquireBurningBuildingsP3]
+Sprinting towards the sound of the beast, you see it spread it’s wings and start to fly away. It quickly drops to the ground with a ground shaking thud. K’nigget lies just behind where the dragon started flying. He’s clearly been heavily injured, and you rush him to the village healers. The man and young woman from earlier come up to you and attempt to comfort you in your distress.
+<>Continue [SquireBurningBuildingsP4]
+;
+
+
+[SquireBurningBuildingsP4]
+The healer comes out of the building where K’nigget was carried to. She gives you a bleak look, and you realize words are not needed at this point. Your mentor and closest friend saved the people of this village, but that doesn’t ease the pain and emptiness you feel now.
+<>Continue [SquireRandomEvent]
+;
+
+
+[SquireAttackedFirst]
+You make contact with the soft flesh below the dragon’s leg. A stream of boiling hot blood quickly covered yours word and hands. You cover your ears as the dragon lets out a deafening roar. You are lifted, and thrown... you tumble across the ground. You can’t seem to orient yourself, and you are terrified you are about to be turned into a human shish kebab.
+<>Continue. [SquireAttackedFirstP2]
+;
+
+
+[SquireAttackedFirstP2]
+After your head  finally stops spinning, you attempt  to sit up. You feel fire coursing through the entire left side of my body, you can’t stop yourself from letting out a groan of pain. You are able to prop yourself up enough to see the dragon leaning heavily on it’s left legs, trying to take a bite out of Sir K’niggit.
+<>Continue. [SquireAttackedFirstP3]
+;
+
+
+[SquireAttackedFirstP3]
+It was clear that the wounded dragon was at a disadvantage. It had clearly noticed it too. The scarlet scales of the dragon gleamed as it unfurled its’ wings. K’niggit lets out a vicious battle cry, having no intention of letting this dragon escape, and races forward, lifting his massive broadsword above his head. Before the dragon is to take off, it’s head is separated violently from it’s long neck.
+<>Continue. [SquireAttackedFirstP4]
+;
+
+
+[SquireAttackedFirstP4]
+You finally get a chance to inspect the damage the dragon did to you. Your left leg is bent in a direction makes you realize it would be a miracle to even walk again. You see K’nigget finally coming to your aid just as the world fades to black...
+<>Continue. [SquireAttackedFirstP5]
+;
+
+
+[SquireAttackedFirstP5]
+You wake up, laying down in a small bed in an unknown home. An older man that was sitting next to your bedside informs you that you’ve been unconscious for nearly a full day. He talks about your wounds, and you realize you barely escaped death. In addition, the wounds to your leg will never heal properly, but you will probably be able to walk again with time. The man lets you know that you and K’nigget are staying in town so he can help the villagers until you have had enough time to heal.
+<>Continue[SquireRandomEvent]
+;
+
+
+[SquireWaitedToAttack]
+You jumped back, hoping that dragon didn’t notice you move right next to it. You smell stench of burning flesh fill the air. Suddenly it is mixed with metallic scent of blood.
+<> Continue. [SquireWaitedToAttackP2]
+;
+
+
+[SquireWaitedToAttackP2]
+The dragon wailed in pain. It takes all your concentration to not drop your sword and cover your head. As the dragon lashes about,you see K’nigget pull his sword from under the dragons’ beefy back legs. It turns towards him, again readying a massive breath of flames. With it turning away from you, you slash at one of it’s rear legs, nearly taking it off.
+<> Continue. [SquireWaitedToAttackP3]
+;
+
+
+[SquireWaitedToAttackP3]
+K’nigget lunges forward, sinking his sword directly into the monster’s chest. As K’nigget rips the sword out, the dragon takes one step forward, then collapsing into a building next to us. You think most insurance covers that.
+<> Continue. [SquireWaitedToAttackP4]
+;
+
+
+[SquireWaitedToAttackP4]
+Before taking another breath, you run from building to building. Many of the initial fires had completely destroyed the houses. You solemnly accept that there was nothing that could have done.
+<>Continue. [SquireWaitedToAttackP4]
+;
+
+
+[SquireWaitedToAttackP4]
+Sir K’nigget walks up to you, his somber eyes staring straight ahead.
+<>Continue. [SquireWaitedToAttackP5]
+;
+
+
+[SquireWaitedToAttackP5]
+“Help as many villagers as you can, then we report this to the local nobles.” He commands you. You see the townspeople collecting the broken remnants of their homes, realizing many lives were completely destroyed that day.
+<>Continue. [SquireRandomEvent]
+;
+
+
+[SquireRandomEvent]
+A few days into the rebuilding of the town a small child walks up to you. “Mister, you aren’t from around here right?” he asks you. “I made some new friends, they said they’re from a village really far from here. Maybe you know them!”
+<>Continue. [SquirePlagueEvent]
+;
+
+
+[SquirePlagueEvent]
+The boy leads you through the village, towards the river past most of the main buildings. As you get closer to the river, sounds of children playing get louder. The boy leads you directly to two children, who must be no older than 7 or 8. You ask them where they’re from, and they point in a direction towards the East.
+<>Continue. [SquirePlagueEventP2]
+;
+
+
+[SquirePlagueEventP2]
+However, after a moment's thought, you realize the closest town in that direction is easily 15 or 16 miles. They explain that their father left them at the edge of this village while he was on a journey to the capital. They tell you he said it would be a short journey, that he needed to pick up some much needed supplies for his village. The children were told to stay with some relatives here. However, as you talk to them more, you realize the relatives will killed in the recent dragon attack.
+<>Continue. [SquirePlagueEventP3]
+;
+
+
+[SquirePlagueEventP3]
+They don’t seem very fazed by that realization though, since they have clearly never met those relatives. You  take them into the village to decide what to do with them.
+<kniggitdead>Continue. [SquirePlagueEventKniggitDead]
+<!kniggitdead>Continue. [SquirePlagueEventKniggitAlive]
+;
+
+
+[SquirePlagueEventKniggitDead]
+After deliberating with the villagers, you realize it could be quite some time before their father returns. However, there’s little to be done, so now it’s just a matter of what to do with them.
+<>I train them in swordplay, they should know how to defend themselves. [SquirePlagueEventKniggitDeadSwords]
+<>I teach them how to help rebuild the town. It could come in handy in their village. [SquirePlagueEventKniggitDeadRebuild]
+;
+
+
+[SquirePlagueEventKniggitDeadSwords]
+The children gladly spar with you with wooden swords. However, it’s fairly obvious it’s more of a game to them. Every few minutes ends in a wrestling match when they realize they aren’t going to win. You spend the time after meals and rebuilding the town teaching these children, hoping your efforts could make their lives just a tiny bit easier. Battered and bruised, you feel you are going to make a difference.
+<>Continue. [SquirePlagueEventKniggitDeadP2]
+;
+
+
+[SquirePlagueEventKniggitDeadRebuild]
+Every day the children meet you first thing in the morning. At first they just helped you carry supplies. The next day, they helped you rebuild one of the neighbors floors. After a week, they were helping the other villagers with little instruction on their own. It was clear to you they were mature for their age. Each day ends with tired aching muscles and a few new bruises, but you think that these new skills could really make a difference.
+<>Continue. [SquirePlagueEventKniggitDeadP2]
+;
+
+
+[SquirePlagueEventKniggitDeadP2]
+“Please sir knight, please wake up!” a shrill young voice screams, jostling you awake. You see the younger of the siblings, desperately grasping at the side of your bed. You are led to the building where the two children have been staying.
+<>Continue. [SquirePlagueEventKniggitDeadP3]
+;
+
+
+[SquirePlagueEventKniggitDeadP3]
+“Please, I can’t wake my brother up, do something.” She begs. As you inspect the brother, you notice he has a fairly significant amount of bruising from working. However, you notice that many of the bruises have been there since you’ve met them! You mutter under your breath about the strange bruising.
+<>Continue. [SquirePlagueEventKniggitDeadP4]
+;
+
+
+[SquirePlagueEventKniggitDeadP4]
+CRASH! A small bowl was dropped behind you. The owner of the house, bringing you water to clean the boys face, has her mouth agape in horror. The grim and eerie silence have the hair on the back of your neck standing on edge. Suddenly, tears start to well up in her now ashen face.
+<>Continue. [SquirePlagueEventKniggitDeadP5]
+;
+
+
+[SquirePlagueEventKniggitDeadP5]
+She starts to whisper. You can’t quite make out what she’s saying, but one word does ring out through the dark night.
+<>Continue. [SquirePlagueEventKniggitDeadP6]
+;
+
+
+[SquirePlagueEventKniggitDeadP6]
+Plague.
+<>Continue. [SquirePlagueEventKniggitDeadP7]
+;
+
+
+[SquirePlagueEventKniggitDeadP7]
+When were they affected? How long has everyone been exposed? What do we do? Questions race through your head. K’niggit would have an answer right now. The color begins to drain from your face. A man enters the room. He gently holds the woman from behind, stroking her dark auburn hair. As he hears her whisper to herself, you also so the a somber look cross his eyes.
+<>Continue. [SquirePlagueEventKniggitDeadP8]
+;
+
+
+[SquirePlagueEventKniggitDeadP8]
+His face warps into a morbid expression as he explains the boys state to you. The plague is curable, but only if caught early. The large bruises on the boy indicate he’s reached a point of no return, in addition to exposing everyone in the town for at least a few days. He immediately quarantines the boy and sister in the bedroom they were located in. He claims there is little hope for either of the siblings, and there’s a good chance many of the townspeople could have been affected. He sends his wife to talk to one of the local militia, explaining that if they get the medicine quickly, there’s a chance the village could end this before it begins. You go to bed, praying the village will be able to pull through.
+<>Continue. [SquirePlagueEventKniggitDeadP9Sick][SquirePlagueEventKniggitDeadP9Healthy][SquirePlagueEventKniggitDeadP9Healthy]
+;
+
+
+[SquirePlagueEventKniggitDeadP9Sick]{plague}
+You wake with a start. Sweat drenches your blanket, it sticks to the skin on your chest. You roll towards the edge of the bed. As you turn to sit up, a wave of nausea sweeps over you. You moan and realize without a doubt, you were exposed enough to catch the same sickness as the young boy. Later that evening, the man from earlier brings you a hot drink. It smells of tar and faintly of bread. It tastes similarly.
+<>Continue [SquirePlagueEventKniggitDeadP10Sick]
+;
+
+
+[SquirePlagueEventKniggitDeadP10Sick]
+Over the next few days, you feel some of your strength return. The same man explains that most of the villagers escaped unscathed. However, you see his eyes darkens when you ask about the two children. Knowing what befell them, you feel sicker than you did just a few nights ago.
+<>Continue. [SquireUniqueEvent]
+;
+
+
+[SquirePlagueEventKniggitDeadP9Healthy]
+You wake up to the sounds of working villagers. A you walk outside you’re stopped by he man from the night before. He explains that most of the villagers escaped unscathed. However, you see his eyes darkens when you ask about the two children. Knowing what befell them, you drop to your knees, and mourn for their untimely passing.
+<>Continue. [SquireUniqueEvent]
+;
+
+
+
+
+[SquirePlagueEventKniggitAlive]
+While walking with the children, you run into Sir K’niggit and ask for his advice. As you are discussing several options, K’niggit suddenly turns his head and begins to sniff the air around him. He urgently moves closer to the children, sniffing with each step he takes. He suddenly spins around, a serious look across his face. “These children have been exposed to the plague.” he rapidly explains. He elaborates “the sulfurous odor around them indicates it, but it seems to me they’re in the very early stages.” He pushes the children towards a carriage near the town center.
+<>Continue [SquirePlagueEventKniggitAliveP2]
+;
+
+
+[SquirePlagueEventKniggitAliveP2]
+“I’ll be taking them to a healer in a nearby town.” he tells you as he hops up on the horse and carriage. “Help them up here, I’ll be back in around a week.” You watch the carriage ride out to edge of town, grateful K’nigget’s sensitive nose finally smelled something that wasn’t food.
+<>Continue. [SquireUniqueEvent]
+;
+
+
+[TheGameBroke]
+You Died because the game developers didn’t write a scenario to handle that last choice.
+<>Well damn, I guess I’ll start over!.[Start]
+;
+
+
+[SquireRandomEvent]
+You head to the tavern. You have a little extra spending money after a long week's worth of work. It’s finally a chance for you to cut loose, at least for a couple hours.
+<>Continue. [SquireTavernBrawl]
+;
+
+
+[SquireTavernBrawl]
+The bar only seems to have lukewarm mead,. But at least it beats water right? The crowd grows thicker, it’s starting to become a little harder to move around the bar. Rebuilding the town has been difficult work, but it seems to be having a positive effect on the town, even after such a harrowing event.
+<>Continue.  [SquireTavernBrawlPT2]
+;
+
+
+[SquireTavernBrawlPT2]
+<>Hide behind bar [SquireHideBehindBar]
+<>Run to the door [SquireRunToDoor]
+<injured>Attempt to defend yourself [SquireDefendInjured]
+<plague>Attempt to defend yourself [SquireDefendPlague]
+<!injured>Attempt to defend yourself [SquireDefendNotInjured]
+;
+
+
+[SquireHideBehindBar]
+<>Continue. [SquireUniqueEvent]
+;
+
+
+[SquireRunToDoor]
+<>Continue. [SquireUniqueEvent]
+;
+
+
+[SquireDefendInjured]
+<>Continue. [Execution]
+;
+
+
+[SquireDefendPlague]
+<>Continue. [Execution]
+;
+
+
+[SquireDefendNotInjured]
+<>Continue. [SquireUniqueEvent]
+;
+
+
+[SquireUniqueEvent]
+Sick Baron
+<>Continue. [SickBaron]
+;
+
+
+[SickBaron]
+<>Visit nearby healers. [SickBaronVisitHealers]
+<renowned> Ask townspeople for information. [SickBaronRenownedPeople]
+<!renowned> Ask townspeople for information. [SickBaronNotRenownedPeople]
+<!kniggitdead> Follow Sir K’niggit. [SickBaronFollowKniggit]
+;
+
+
+[SickBaronVisitHealers]
+<>Continue. [Execution]
+;
+
+
+[SickBaronRenownedPeople]
+<>Continue. [Knight]
+;
+
+
+[SickBaronNotRenownedPeople]
+<>Continue. [Neutral]
+;
+
+
+[SickBaronFollowKniggit]
+<>Continue. [Knight]
+;
+
+
+[SquireUniqueEvent]
+<>Continue [SquireCallToArms]
+;
+
+
+[SquireCallToArms]
+<>Refuse to go to war. [Death]
+<injured> Go to war. [Death]
+<!injured>Go to war. [Knight]
+;
+
+
+[Execution]
+As you remembered your life for good or evil your choice has lead to this. Ritual Execution
+<> Restart. [Start]
+;
+
+
+[Knight]
+You have lead an amazing life, your heroism and skills have made your wildest dreams come true The Knighting Ritual commences.
+<> Restart. [Start]
+;
+
+
+[Neutral]
+You stand and watch as some schmuck that could have been you kneels to get knighted.
+<> Restart. [Start]
+;
+
+
+[Death]
+As the sword is coming down a faceless figure steps forward to read you your last Rites. May you have made peace with God.
+<> Restart. [Start]
+;

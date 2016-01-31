@@ -21,9 +21,9 @@ public class GameEventDatabaseEditor : EditorWindow
 	private int selectedEvent;
 	private string newDatabaseName;
 	private List<GameEventDatabase> databases;
-	private string dataToParse;
 
-	private const string DATABASE_PATH = @"Assets/Database/";
+	private string lastFolder = string.Empty;
+	private const string DATABASE_PATH = @"Assets/Resource/Database/";
 
 	private GameEventDatabase currentDatabase;
 	private Vector2 _scrollPos;
@@ -143,6 +143,7 @@ public class GameEventDatabaseEditor : EditorWindow
 					state = State.EDIT;
 				}
 			}
+			EditorGUILayout.LabelField(i.ToString(), GUILayout.Width(25));
 
 			EditorGUILayout.EndHorizontal();
 		}
@@ -159,6 +160,10 @@ public class GameEventDatabaseEditor : EditorWindow
 		if(GUILayout.Button("Parse"))
 		{
 			state = State.PARSE;
+		}
+		if(GUILayout.Button("Verify"))
+		{
+			Verify();
 		}
 		EditorGUILayout.EndHorizontal();
 		EditorGUILayout.Space();
@@ -196,9 +201,10 @@ public class GameEventDatabaseEditor : EditorWindow
 		EditorGUILayout.BeginHorizontal();
 		if(GUILayout.Button("Yes, Chose a file!"))
 		{
-			var path = EditorUtility.OpenFilePanel("Chose an adventure text file.", "", "txt");
+			var path = EditorUtility.OpenFilePanel("Chose an adventure text file.", lastFolder, "txt");
 			if(!string.IsNullOrEmpty(path))
-			{ 
+			{
+				lastFolder = Path.GetDirectoryName(path);
 				using (var s = new StreamReader(path))
 				{
 					var str = s.ReadToEnd();
@@ -206,29 +212,24 @@ public class GameEventDatabaseEditor : EditorWindow
 				}
 			}
 		}
-		else if(GUILayout.Button("Yes, Parse Test Pasted Below"))
-		{
-			ParseDatabaseText(dataToParse);
-		}
 		else if(GUILayout.Button("Cancel."))
 		{
 			state = State.BLANK;
 		}
 		EditorGUILayout.EndHorizontal();
-
-		dataToParse = EditorGUILayout.TextArea(dataToParse, GUILayout.MinWidth(100), GUILayout.ExpandWidth(false));
+		
 	}
 
 	void ParseDatabaseText(string str)
 	{
 		currentDatabase.Clear();
-		var eventRegex = new Regex("\\[[\\s\\S]+?(?=^\\[)", RegexOptions.Multiline);
+		var eventRegex = new Regex("\\[[\\s\\S]+?(?=;)", RegexOptions.Multiline);
 		var keyAndTextRegex = new Regex("\\[(?<key>.+?)\\] ?(?<flags>{[\\w, !]+})?(\\r\\n)?(?<text>[\\s\\S]+?)(?=<)", RegexOptions.Multiline);
-		var optionRegex = new Regex("(?<flags><[!\\w ]*>) ?(?<text>[\\s\\S]+?\\])", RegexOptions.Multiline);
+		var optionRegex = new Regex("(?<flags><[!\\w ]*>) ?(?<text>[\\s\\S]+?\\]) *(?:\n|\r|\r\n)", RegexOptions.Multiline);
 		var targetRegex = new Regex("\\[(?<target>.+?)\\]", RegexOptions.Multiline);
 		var choiceTextRegex = new Regex("^([\\s\\S]+?(?=\\[))", RegexOptions.Multiline);
 		var flagsRegex = new Regex("!?\\w+");
-		var optionFlagsRegex = new Regex("<(?:!?\\w+,?)+>");
+		//var optionFlagsRegex = new Regex("<(?:!?\\w+,?)+>");
 
 		var eventMatches = eventRegex.Matches(str);
 		foreach (Match em in eventMatches)
@@ -282,9 +283,9 @@ public class GameEventDatabaseEditor : EditorWindow
 	{
 		EditorGUILayout.LabelField(
 			"There are 3 things that can be displayed here.\n" +
-			"1) Game Event info for editing\n" +
-			"2) Black fields for adding a new Game Event\n" +
-			"3) Blank Area",
+			"1) Game Event info for editing.\n" +
+			"2) Utilities to parse a file.\n" +
+			"3) This Blank Area.",
 			GUILayout.ExpandHeight(true));
 	}
 
@@ -296,7 +297,6 @@ public class GameEventDatabaseEditor : EditorWindow
 
 			_optionsScrollPos = EditorGUILayout.BeginScrollView(_optionsScrollPos, "box", GUILayout.ExpandHeight(true));
 			currentDatabase[selectedEvent].Text = EditorGUILayout.TextArea(currentDatabase[selectedEvent].Text, GUILayout.ExpandHeight(true));
-
 
 			EditorGUILayout.Space();
 			EditorGUILayout.PrefixLabel("Flags: ");
@@ -426,6 +426,52 @@ public class GameEventDatabaseEditor : EditorWindow
 		{
 			Debug.LogError(exc, this);
 			state = State.BLANK;
+		}
+	}
+	void Verify()
+	{
+		HashSet<string> eventCache = new HashSet<string>();
+		for (int i = 0; i < currentDatabase.Count; i++)
+		{
+			var e = currentDatabase[i];
+			if (string.IsNullOrEmpty(e.Key))
+				Debug.LogError("Event: " + i + " has no key.");
+
+			if (string.IsNullOrEmpty(e.Text))
+				Debug.LogError("Event: " + i + " : " + e.Key + " has no text.");
+
+			if (e.Options.IsNullOrEmpty())
+				Debug.LogError("Event: " + i + " : " + e.Key + " has no Options.");
+			else
+			{
+				for (int j = 0; j < e.Options.Count; j++)
+				{
+					var o = e.Options[j];
+					if (string.IsNullOrEmpty(o.Text))
+						Debug.LogError("Event: " + i + " : " + e.Key + " Option " + j + " has no text.");
+					if (o.Targets.IsNullOrEmpty())
+						Debug.LogError("Event: " + i + " : " + e.Key + " Option " + j + " has no targets.");
+					else
+					{
+						for (int k = 0; k < o.Targets.Count; k++)
+						{
+							var t = o.Targets[k];
+							eventCache.Add(t);
+							var targetEvent = currentDatabase[t];
+							if (targetEvent.Key == "TheGameBroke")
+								Debug.LogError("Event: " + i + " : " + e.Key + " Option " + j + " target " + k + " : " + t + " caused an access to TheGameBroke event");
+						}
+					}
+				}
+			}
+		}
+		for (int i = 0; i < currentDatabase.Count; i++)
+		{
+			var e = currentDatabase[i];
+			if(eventCache.Add(e.Key))
+			{
+				Debug.LogError("Event: " + i + " : " + e.Key + " is never accessed.");
+			}
 		}
 	}
 }
