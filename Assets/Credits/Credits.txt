@@ -1,4 +1,21 @@
-Team:
+Based off of GGJ2016 Choose Your Own Adventure Engine! See below!
+
+Sound Design: Brian Luft
+Writer: Ama Birch
+Art Direction: Anthony Bagsby
+Particle Effects: Jesse Ash
+Character Art: James Davis
+Programmer: Mike Bianchini
+
+Thanks
+Jesse Pascoe
+Kunal Patel
+Tyler Quillen
+
+
+
+
+Choose Your Own Adventure Engine Team:
 
 Scott "Scooter" Martin - Writing
 Jeff Kikel - Writing
@@ -6,20 +23,4 @@ E "QnRamoth" Denison - Writing
 Jesse "Archimagus" Pascoe - Programming
 
 
-Special Thanks To:
 
-"Lord of the Land" Kevin MacLeod (incompetech.com)
-Licensed under Creative Commons: By Attribution 3.0 License
-http://creativecommons.org/licenses/by/3.0/
-
-"Parchement Texture"
-VWolfdog
-http://opengameart.org/content/parchement-textures
-
-"GUI Buttons"
-Scribe
-http://opengameart.org/content/gui-buttons
-
-"CursorAnimated"
-Kemono
-http://opengameart.org/content/cursoranimated

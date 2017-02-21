@@ -15,6 +15,7 @@ public class Game : MonoBehaviour
 	ScrollRect _textAreaScrollView;
 	[SerializeField]
 	Transform _ChoicesArea;
+	AudioSource audioElement;
 
 	Text _eventText;
 	StringBuilder _story = new StringBuilder();
@@ -40,9 +41,16 @@ public class Game : MonoBehaviour
 	void GoToEvent(string key)
 	{
 		if (key == "Start")
-			_story = new StringBuilder();
+			_story = new StringBuilder ();
+		else {
+			audioElement = GameObject.Find ("ChoicesArea").GetComponent<AudioSource> ();
+			//audioElement.PlayOneShot(ChoiceButton.ClickSound);
+			audioElement.Play ();
+			print ("MTB played sound");
+		}
 		var e = _eventDatabase[key];
-		_eventText.text = "<color=grey>" + _story.ToString() + "</color>" + e.Text;
+		//_eventText.text = "<color=grey>" + _story.ToString() + "</color>" + e.Text;
+		_eventText.text = "<color=white>" + e.Text + "</color>";
 		_story.Append(e.Text);
 		StartCoroutine(UpdateScroll());
 

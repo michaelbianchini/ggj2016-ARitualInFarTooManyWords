@@ -14,12 +14,14 @@ public class ChoiceButton : Button
 		base.Start();
 		textElement = GetComponentInChildren<Text>();
 		layoutElement = GetComponent<LayoutElement>();
-		slider = GameObject.Find("ButtonTextSlider").GetComponent<Slider>();
+		//slider = GameObject.Find("ButtonTextSlider").GetComponent<Slider>();
 	}
 	void Update ()
 	{
 		textElement.text = ChoiceText;
-		layoutElement.preferredHeight = textElement.preferredHeight+10;
-		textElement.fontSize = (int)slider.value;
+		layoutElement.preferredHeight = 300;
+		layoutElement.preferredWidth = 400;
+		textElement.fontSize = 30;
+
 	}
 }
