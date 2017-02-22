@@ -14,14 +14,15 @@ public class Game : MonoBehaviour
 	[SerializeField]
 	ScrollRect _textAreaScrollView;
 	[SerializeField]
-	Transform _ChoicesArea;
-	AudioSource audioElement;
+	private Image _backgroundImage;
+	[SerializeField]
+	Transform[] _choicesAreas;
 
 	Text _eventText;
 	StringBuilder _story = new StringBuilder();
 	HashSet<string> _flags = new HashSet<string>();
-	
-	void Start ()
+
+	void Start()
 	{
 		_eventText = _textAreaScrollView.GetComponentInChildren<Text>();
 		if (_eventDatabase == null)
@@ -32,7 +33,7 @@ public class Game : MonoBehaviour
 		if (_eventDatabase == null)
 			Debug.LogError("Unable to find a GameEventDatabase.");
 		GoToEvent("Start");
-	}	
+	}
 	IEnumerator UpdateScroll()
 	{
 		yield return null;
@@ -41,36 +42,81 @@ public class Game : MonoBehaviour
 	void GoToEvent(string key)
 	{
 		if (key == "Start")
-			_story = new StringBuilder ();
-		else {
-			audioElement = GameObject.Find ("ChoicesArea").GetComponent<AudioSource> ();
-			//audioElement.PlayOneShot(ChoiceButton.ClickSound);
-			audioElement.Play ();
-			print ("MTB played sound");
-		}
+			_story = new StringBuilder();
 		var e = _eventDatabase[key];
-		//_eventText.text = "<color=grey>" + _story.ToString() + "</color>" + e.Text;
+		//_eventText.text = "<color=grey>" + _story.ToString() + "</color>" + "<color=white>" + e.Text + "</color>";
 		_eventText.text = "<color=white>" + e.Text + "</color>";
 		_story.Append(e.Text);
 		StartCoroutine(UpdateScroll());
 
 		e.Flags.ForEach(f => _flags.Add(f));
-		for (int i = 0; i < _ChoicesArea.childCount; i++)
-		{
-			Destroy(_ChoicesArea.GetChild(i).gameObject);
-		}
+		e.ClearFlags.ForEach(f => _flags.RemoveWhere(f2 => f2 == f));
+
+		var opts = new List<EventOption>();
 		foreach (var opt in e.Options)
 		{
 			if (opt.RequiredFlags.Any(f => !_flags.Contains(f))) // If we are missing any of the required flags dont add this option
 				continue;
 			if (opt.NotAllowedFlags.Any(f => _flags.Contains(f))) // If we have any of the not allowed flags don't add this option
 				continue;
+			opts.Add(opt);
+		}
+		foreach (var choicesArea in _choicesAreas)
+		{
+			choicesArea.gameObject.SetActive(false);
+		}
+		if (opts.Count == 0 || opts.Count > _choicesAreas.Length)
+		{
+			Debug.LogError("No view for " + opts.Count + " Choices");
+		}
+		else
+		{
+			var area = _choicesAreas[opts.Count - 1];
+			area.gameObject.SetActive(true);
+			var buttons = area.GetComponentsInChildren<ChoiceButton>();
+			if (buttons.Length != opts.Count)
+				Debug.LogError(area.name + " does not have the required " + opts.Count + " ChoiceButtons", area);
+			for (int i = 0; i < opts.Count; i++)
+			{
+				var o = opts[i];
+				var b = buttons[i];
+				b.ChoiceText = o.Text;
+				b.onClick.AddListener(() => GoToEvent(o.Target));
+			}
+		}
+		if (e.ImageId.IsNullOrEmpty())
+		{
+			_backgroundImage.enabled = false;
+		}
+		else
+		{
+			var img = Resources.Load<Sprite>(e.ImageId);
+			if (img != null)
+			{
+				_backgroundImage.enabled = true;
+				_backgroundImage.sprite = img;
+			}
+			else
+			{
+				Debug.LogError("No image found for " + e.ImageId);
+			}
 
-			var o = opt;
-			var b = Instantiate(_choiceButtonPrefab);
-			b.ChoiceText = o.Text;
-			b.onClick.AddListener(() => GoToEvent(o.Target));
-			b.transform.SetParent(_ChoicesArea, false);
+		}
+		if (!e.SoundId.IsNullOrEmpty())
+		{
+			var ac = Resources.Load<AudioClip>(e.SoundId);
+			if (ac != null)
+			{
+				var audioElement = GetComponentInChildren<AudioSource>();
+				if (audioElement != null)
+				{
+					audioElement.PlayOneShot(ac, e.SoundVolume);
+				}
+			}
+			else
+			{
+				Debug.LogError("No audio clip found for " + e.SoundId);
+			}
 		}
 	}
 }

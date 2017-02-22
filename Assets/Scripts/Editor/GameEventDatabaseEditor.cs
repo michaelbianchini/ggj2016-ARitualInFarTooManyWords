@@ -1,12 +1,10 @@
-﻿using UnityEngine;
-using UnityEditor;
-using System.Collections;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
-using System.Linq;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
+using UnityEditor;
+using UnityEngine;
 
 public class GameEventDatabaseEditor : EditorWindow
 {
@@ -61,7 +59,7 @@ public class GameEventDatabaseEditor : EditorWindow
 	void LoadDatabase()
 	{
 		databases = new List<GameEventDatabase>();
-		foreach(var path in AssetDatabase.GetAllAssetPaths())
+		foreach (var path in AssetDatabase.GetAllAssetPaths())
 		{
 			if (path.EndsWith(".asset"))
 			{
@@ -72,7 +70,7 @@ public class GameEventDatabaseEditor : EditorWindow
 		}
 		if (currentDatabase == null)
 			currentDatabase = databases.FirstOrDefault();
-		
+
 		if (currentDatabase == null)
 			CreateDatabase("default");
 	}
@@ -80,7 +78,7 @@ public class GameEventDatabaseEditor : EditorWindow
 	void CreateDatabase(string name)
 	{
 		currentDatabase = ScriptableObject.CreateInstance<GameEventDatabase>();
-		AssetDatabase.CreateAsset(currentDatabase, DATABASE_PATH+name+".asset");
+		AssetDatabase.CreateAsset(currentDatabase, DATABASE_PATH + name + ".asset");
 		AssetDatabase.SaveAssets();
 		AssetDatabase.Refresh();
 	}
@@ -98,7 +96,7 @@ public class GameEventDatabaseEditor : EditorWindow
 					currentDatabase = databases[i];
 				}
 			}
-			catch(Exception exc)
+			catch (Exception exc)
 			{
 				Debug.Log(exc.Message);
 				databases.RemoveAt(i);
@@ -107,7 +105,7 @@ public class GameEventDatabaseEditor : EditorWindow
 		}
 		EditorGUILayout.BeginHorizontal();
 		GUI.enabled = !string.IsNullOrEmpty(newDatabaseName);
-		if(GUILayout.Button("+", GUILayout.ExpandWidth(false)))
+		if (GUILayout.Button("+", GUILayout.ExpandWidth(false)))
 		{
 			CreateDatabase(newDatabaseName);
 			LoadDatabase();
@@ -157,11 +155,11 @@ public class GameEventDatabaseEditor : EditorWindow
 
 		EditorGUILayout.BeginHorizontal(GUILayout.ExpandWidth(true));
 		EditorGUILayout.LabelField("Events: " + currentDatabase.Count, GUILayout.Width(100));
-		if(GUILayout.Button("Parse"))
+		if (GUILayout.Button("Parse"))
 		{
 			state = State.PARSE;
 		}
-		if(GUILayout.Button("Verify"))
+		if (GUILayout.Button("Verify"))
 		{
 			Verify();
 		}
@@ -199,10 +197,10 @@ public class GameEventDatabaseEditor : EditorWindow
 			"This will completely overwrite your current database.\n",
 			GUILayout.ExpandHeight(true));
 		EditorGUILayout.BeginHorizontal();
-		if(GUILayout.Button("Yes, Chose a file!"))
+		if (GUILayout.Button("Yes, Chose a file!"))
 		{
 			var path = EditorUtility.OpenFilePanel("Chose an adventure text file.", lastFolder, "txt");
-			if(!string.IsNullOrEmpty(path))
+			if (!string.IsNullOrEmpty(path))
 			{
 				lastFolder = Path.GetDirectoryName(path);
 				using (var s = new StreamReader(path))
@@ -212,23 +210,27 @@ public class GameEventDatabaseEditor : EditorWindow
 				}
 			}
 		}
-		else if(GUILayout.Button("Cancel."))
+		else if (GUILayout.Button("Cancel."))
 		{
 			state = State.BLANK;
 		}
 		EditorGUILayout.EndHorizontal();
-		
+
 	}
 
 	void ParseDatabaseText(string str)
 	{
+		str = str + @"[TheGameBroke]
+You Died because the game developers didn’t write a scenario to handle that last choice.
+<>I guess I’ll start over![Start]
+;";
 		currentDatabase.Clear();
-		var eventRegex = new Regex("\\[[\\s\\S]+?(?=;)", RegexOptions.Multiline);
-		var keyAndTextRegex = new Regex("\\[(?<key>.+?)\\] ?(?<flags>{[\\w, !]+})?(\\r\\n)?(?<text>[\\s\\S]+?)(?=<)", RegexOptions.Multiline);
+		var eventRegex = new Regex(@"\[[\s\S]+?(?=;)", RegexOptions.Multiline);
+		var keyAndTextRegex = new Regex(@"\[(?<key>.+?)\] ?(?<flags>{[\w,. !:/]+})?(\r\n)?(?<text>[\s\S]+?)(?=<)", RegexOptions.Multiline);
 		var optionRegex = new Regex("(?<flags><[!,\\w ]*>) ?(?<text>[\\s\\S]+?\\]) *(?:\n|\r|\r\n)", RegexOptions.Multiline);
-		var targetRegex = new Regex("\\[(?<target>.+?)\\]", RegexOptions.Multiline);
-		var choiceTextRegex = new Regex("^([\\s\\S]+?(?=\\[))", RegexOptions.Multiline);
-		var flagsRegex = new Regex("!?\\w+");
+		var targetRegex = new Regex(@"\[(?<target>.+?)\]", RegexOptions.Multiline);
+		var choiceTextRegex = new Regex(@"^([\s\S]+?(?=\[))", RegexOptions.Multiline);
+		var flagsRegex = new Regex(@"!?[\w:./]+");
 		//var optionFlagsRegex = new Regex("<(?:!?\\w+,?)+>");
 
 		var eventMatches = eventRegex.Matches(str);
@@ -244,10 +246,42 @@ public class GameEventDatabaseEditor : EditorWindow
 			foreach (Match fm in flagMatches)
 			{
 				var flag = fm.Value.TrimStart('!');
-				if (fm.Value.StartsWith("!"))
-					e.Flags.RemoveAll(s=>s == flag);
+				if (flag.Contains(':'))
+				{
+					if (flag.StartsWith("s", StringComparison.InvariantCultureIgnoreCase))
+					{
+						// Doing two separate trims here as we only want to trim the s before the colon, inscase the soudn name starts with s
+						flag = flag.TrimStart('s', 'S').TrimStart(':');
+						if (flag.Contains(':'))
+						{
+							var vol = flag.Substring(flag.IndexOf(':') + 1);
+							e.SoundVolume = float.Parse(vol);
+							if (e.SoundVolume < 0 || e.SoundVolume > 1)
+								Debug.LogError("Sound Volume must be between 0 and 1 in event " + e.Key);
+							e.SoundVolume = Mathf.Clamp01(e.SoundVolume);
+
+							flag = flag.Substring(0, flag.IndexOf(':'));
+						}
+						e.SoundId = flag;
+					}
+					else if (flag.StartsWith("i", StringComparison.InvariantCultureIgnoreCase))
+					{
+						// Doing two separate trims here as we only want to trim the s before the colon, inscase the soudn name starts with i
+						flag = flag.TrimStart('i', 'I').TrimStart(':');
+						e.ImageId = flag;
+					}
+					else
+					{
+						Debug.LogError("Unrecognized flag in event " + e.Key);
+					}
+				}
 				else
-					e.Flags.Add(flag);
+				{
+					if (fm.Value.StartsWith("!"))
+						e.ClearFlags.Add(flag);
+					else
+						e.Flags.Add(flag);
+				}
 			}
 
 			var optionMatches = optionRegex.Matches(em.Value);
@@ -276,6 +310,7 @@ public class GameEventDatabaseEditor : EditorWindow
 			}
 			currentDatabase.Add(e);
 		}
+
 		EditorUtility.SetDirty(currentDatabase);
 	}
 
@@ -296,7 +331,18 @@ public class GameEventDatabaseEditor : EditorWindow
 			currentDatabase[selectedEvent].Key = EditorGUILayout.TextField(new GUIContent("Key: "), currentDatabase[selectedEvent].Key);
 
 			_optionsScrollPos = EditorGUILayout.BeginScrollView(_optionsScrollPos, "box", GUILayout.ExpandHeight(true));
+			EditorStyles.textField.wordWrap = true;
 			currentDatabase[selectedEvent].Text = EditorGUILayout.TextArea(currentDatabase[selectedEvent].Text, GUILayout.ExpandHeight(true));
+
+			EditorGUILayout.Space();
+
+
+			EditorGUILayout.PrefixLabel("Sound: ");
+			currentDatabase[selectedEvent].SoundId = EditorGUILayout.TextField(currentDatabase[selectedEvent].SoundId);
+			currentDatabase[selectedEvent].SoundVolume = EditorGUILayout.Slider("Volume", currentDatabase[selectedEvent].SoundVolume, 0, 1);
+
+			EditorGUILayout.PrefixLabel("Image: ");
+			currentDatabase[selectedEvent].ImageId = EditorGUILayout.TextField(currentDatabase[selectedEvent].ImageId);
 
 			EditorGUILayout.Space();
 			EditorGUILayout.PrefixLabel("Flags: ");
@@ -317,6 +363,28 @@ public class GameEventDatabaseEditor : EditorWindow
 			if (GUILayout.Button("+", GUILayout.Width(100)))
 			{
 				currentDatabase[selectedEvent].Flags.Add("");
+			}
+
+			EditorGUILayout.Space();
+			EditorGUILayout.Space();
+			EditorGUILayout.PrefixLabel("Clear Flags: ");
+			var cf = currentDatabase[selectedEvent].ClearFlags;
+			for (int i = 0; i < cf.Count; i++)
+			{
+				EditorGUILayout.BeginHorizontal();
+				if (GUILayout.Button("-", GUILayout.Width(25)))
+				{
+					cf.RemoveAt(i);
+					EditorUtility.SetDirty(currentDatabase);
+					return;
+				}
+
+				cf[i] = GUILayout.TextField(cf[i]);
+				EditorGUILayout.EndHorizontal();
+			}
+			if (GUILayout.Button("+", GUILayout.Width(100)))
+			{
+				currentDatabase[selectedEvent].ClearFlags.Add("");
 			}
 
 			EditorGUILayout.Space();
@@ -422,7 +490,7 @@ public class GameEventDatabaseEditor : EditorWindow
 
 			EditorGUILayout.EndScrollView();
 		}
-		catch(Exception exc)
+		catch (Exception exc)
 		{
 			Debug.LogError(exc, this);
 			state = State.BLANK;
@@ -468,7 +536,7 @@ public class GameEventDatabaseEditor : EditorWindow
 		for (int i = 0; i < currentDatabase.Count; i++)
 		{
 			var e = currentDatabase[i];
-			if(eventCache.Add(e.Key))
+			if (eventCache.Add(e.Key))
 			{
 				Debug.LogError("Event: " + i + " : " + e.Key + " is never accessed.");
 			}

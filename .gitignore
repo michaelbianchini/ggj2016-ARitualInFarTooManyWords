@@ -73,3 +73,4 @@ $RECYCLE.BIN/
 /Assets/uIntelliSense/VisualStudioExtension
 /Assets/uIntelliSense/VisualStudioExtension.meta
 /Assets/uIntelliSense/Editor
+*.suo
