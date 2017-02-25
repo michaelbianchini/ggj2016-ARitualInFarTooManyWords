@@ -6,11 +6,11 @@ public class GameEvent
 {
 	public string Key = string.Empty;
 	public string Text = string.Empty;
-	public string SoundId = string.Empty;
-	public float SoundVolume = 1;
 	public string ImageId = string.Empty;
 	public List<string> Flags = new List<string>();
 	public List<string> ClearFlags = new List<string>();
+	public List<string> SoundIds = new List<string>();
+	public List<float> SoundVolumes = new List<float>();
 	public List<EventOption> Options = new List<EventOption>();
 }
 

@@ -252,17 +252,19 @@ You Died because the game developers didn’t write a scenario to handle that la
 					{
 						// Doing two separate trims here as we only want to trim the s before the colon, inscase the soudn name starts with s
 						flag = flag.TrimStart('s', 'S').TrimStart(':');
+						var v = 1.0f;
 						if (flag.Contains(':'))
 						{
 							var vol = flag.Substring(flag.IndexOf(':') + 1);
-							e.SoundVolume = float.Parse(vol);
-							if (e.SoundVolume < 0 || e.SoundVolume > 1)
+							v = float.Parse(vol);
+							if (v < 0 || v > 1)
 								Debug.LogError("Sound Volume must be between 0 and 1 in event " + e.Key);
-							e.SoundVolume = Mathf.Clamp01(e.SoundVolume);
+							v = Mathf.Clamp01(v);
 
 							flag = flag.Substring(0, flag.IndexOf(':'));
 						}
-						e.SoundId = flag;
+						e.SoundVolumes.Add(v);
+						e.SoundIds.Add(flag);
 					}
 					else if (flag.StartsWith("i", StringComparison.InvariantCultureIgnoreCase))
 					{
@@ -337,13 +339,33 @@ You Died because the game developers didn’t write a scenario to handle that la
 			EditorGUILayout.Space();
 
 
-			EditorGUILayout.PrefixLabel("Sound: ");
-			currentDatabase[selectedEvent].SoundId = EditorGUILayout.TextField(currentDatabase[selectedEvent].SoundId);
-			currentDatabase[selectedEvent].SoundVolume = EditorGUILayout.Slider("Volume", currentDatabase[selectedEvent].SoundVolume, 0, 1);
-
 			EditorGUILayout.PrefixLabel("Image: ");
 			currentDatabase[selectedEvent].ImageId = EditorGUILayout.TextField(currentDatabase[selectedEvent].ImageId);
 
+			EditorGUILayout.Space();
+			EditorGUILayout.PrefixLabel("Sounds: ");
+			var si = currentDatabase[selectedEvent].SoundIds;
+			var sv = currentDatabase[selectedEvent].SoundVolumes;
+			for (int i = 0; i < si.Count; i++)
+			{
+				EditorGUILayout.BeginHorizontal();
+				if (GUILayout.Button("-", GUILayout.Width(25)))
+				{
+					si.RemoveAt(i);
+					EditorUtility.SetDirty(currentDatabase);
+					return;
+				}
+
+				si[i] = GUILayout.TextField(si[i]);
+				EditorGUILayout.EndHorizontal();
+				sv[i] = EditorGUILayout.Slider("Volume", sv[i], 0, 1);
+			}
+			if (GUILayout.Button("+", GUILayout.Width(100)))
+			{
+				si.Add("");
+			}
+
+			EditorGUILayout.Space();
 			EditorGUILayout.Space();
 			EditorGUILayout.PrefixLabel("Flags: ");
 			var f1 = currentDatabase[selectedEvent].Flags;

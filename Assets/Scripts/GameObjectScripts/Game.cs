@@ -81,8 +81,8 @@ public class Game : MonoBehaviour
 				var o = opts[i];
 				var b = buttons[i];
 				b.ChoiceText = o.Text;
-                b.onClick.RemoveAllListeners();
-                b.onClick.AddListener(() => GoToEvent(o.Target));
+				b.onClick.RemoveAllListeners();
+				b.onClick.AddListener(() => GoToEvent(o.Target));
 			}
 		}
 		if (e.ImageId.IsNullOrEmpty())
@@ -105,20 +105,22 @@ public class Game : MonoBehaviour
 			}
 
 		}
-		if (!e.SoundId.IsNullOrEmpty())
+		for (int i = 0; i < e.SoundIds.Count; i++)
 		{
-			var ac = Resources.Load<AudioClip>(e.SoundId);
+			var soundId = e.SoundIds[i];
+			var soundVolume = e.SoundVolumes[i];
+			var ac = Resources.Load<AudioClip>(soundId);
 			if (ac != null)
 			{
 				var audioElement = GetComponentInChildren<AudioSource>();
 				if (audioElement != null)
 				{
-					audioElement.PlayOneShot(ac, e.SoundVolume);
+					audioElement.PlayOneShot(ac, soundVolume);
 				}
 			}
 			else
 			{
-				Debug.LogError("No audio clip found for " + e.SoundId);
+				Debug.LogError("No audio clip found for " + soundId);
 			}
 		}
 	}
