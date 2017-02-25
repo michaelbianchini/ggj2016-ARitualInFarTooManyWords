@@ -81,12 +81,15 @@ public class Game : MonoBehaviour
 				var o = opts[i];
 				var b = buttons[i];
 				b.ChoiceText = o.Text;
-				b.onClick.AddListener(() => GoToEvent(o.Target));
+                b.onClick.RemoveAllListeners();
+                b.onClick.AddListener(() => GoToEvent(o.Target));
 			}
 		}
 		if (e.ImageId.IsNullOrEmpty())
 		{
-			_backgroundImage.enabled = false;
+			//_backgroundImage.enabled = false;
+			_backgroundImage.enabled = true;
+			_backgroundImage.sprite = Resources.Load<Sprite>("Images/black");
 		}
 		else
 		{

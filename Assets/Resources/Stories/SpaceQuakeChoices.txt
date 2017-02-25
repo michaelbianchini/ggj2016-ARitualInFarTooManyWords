@@ -1,0 +1,191 @@
+﻿[Start]
+Space Quake
+
+You are the Space Surfer. Your job is to take your Tremor to ride the waves space in search of the Galaxy of Gold. 
+<>Continue[Earth]
+;
+
+[Earth]
+Are you ready to takeoff to find the Gold of the Galaxy?
+<>Yes[GoldYes]
+<>No[GoldNo]
+;
+
+[GoldNo]
+You get one last hug from your Love. Are you ready to takeoff to find the Gold of the Galaxy?
+<>Yes[HugYes]
+<>No[HugNo]
+;
+
+[HugNo]{i:Images/dragon}
+You are too afraid to fly. Sorry. We will have to find another Space Surfer to go in your place. Maybe next time. (Sound Effect: Crowd Boos)
+<>Surf Again[Start]
+;
+
+[HugYes]{s:Sounds/Comet_B_04:0.9}
+(Sound Effects and possible visual elements of the Space Surfer taking off, the crowd cheering in waves, the sound of the jet engines with increasing volume until the sound barrier is broken, and the Space Surfer is in space.)
+
+Do you want to go to the Moon or the Milky Way?
+<>Moon[Moon]
+<>Milky Way[MilkyWay]
+;
+
+[GoldYes]{s:Sounds/Comet_B_04:0.9}
+(Sound Effects and possible visual elements of the Space Surfer taking off, the crowd cheering in waves, the sound of the jet engines with increasing volume until the sound barrier is broken, and the Space Surfer is in space.)
+
+Do you want to go to the Moon or the Milky Way?
+<>Moon[Moon]
+<>Milky Way[MilkyWay]
+;
+
+[Moon]
+To get to the Gold of the Galaxy your Tremor has to ride the waves of the Great Comet’s Tail. Do you want to go to the light side or the dark side of the moon?
+<>Light[LightSideOfMoon]
+<>Dark[DarkSideOfMoon]
+;
+
+[MilkyWay]
+To get to the Gold of the Galaxy you have to ride the Great Comet’s Tail. Do you want to go to left or right?
+<>Left[CometLeft]
+<>Right[CometRight]
+;
+
+[DarkSideOfMoon]
+You know that this is a very dangerous mission and think of your Love one last time. As you enter the dark side of the moon your Tremor makes ripples through the galaxy and produces sounds that resemble cracking ice. You wonder if you made the right choice. Should you go back and land on the moon and go back to Earth or stay in the air in search of the comet?
+<>Earth[MoonToEarth]
+<>Comet[StayComet]
+;
+
+[MoonToEarth]
+As you begin to move towards the surface of the dark side of the moon, you feel the gravitational waves pull your Tremor towards the moon. You are preparing to enter the moon’s atmosphere to land when out of nowhere the Great Comet appears, and its tail pulls you back into space. Do you try to surf on the Great Comet’s Tail or continue trying to land on the surface of the dark side of the moon?
+<>Ride[Ride] 
+<>Land[Land]
+;
+
+[Land]{i:Images/dragon}
+As you attempt to land on the surface of the dark side of the moon, the Great Comet approaches and the waves from its tail send you out towards the Milky Way. After the ice waves of the comet pass the only sound you can hear is the twinkling of stars. You feel yourself drifting. Your Tremor is not working. Slowly you realize you are being sucked into the gravitational waves of a black hole. 
+<>Surf Again[Start]
+;
+
+[Ride]
+You did it! You are surfing the Great Comet’s Tail towards the center of the Milky Way. Moving at the speed of light. Through a meteorite storm. Passing through waves of star dust. Leaving concentric circles as you ride towards the Gold of the Galaxy. You can see the waves of light. You believe it is the gold. Out of nowhere you see the Space Dragon. Do you continue surfing on the tail of the Great Comet or do you get off and fight the Space Dragon?
+<>Surf[StayComet]
+<>Fight[FightDragon]
+;
+
+[FightDragon]{i:Images/dragon}
+Using the waves of your speed of light heat wave tool you defeat the Space Dragon. You have the gold. Unfortunately, your Tremor is out of fuel and you are stranded in the Milky Way. Maybe next time Space Surfer.
+<>Surf Again[Start]
+;
+
+[StayComet]{i:Images/galaxy_of_gold}
+The Great Comet brings you directly to the Space Dragon. You can see the Gold of the Galaxy in the near distance. You use your speed of light heat waves tool to blind the Space Dragon. The Great Comet brings you to the gold. You get the Gold of the Galaxy! You jump off the Great Comet’s tail and engage your rocket jets using your momentum to head back to Earth. You are now very wealthy, Space Surfer. YOU WIN!
+<>Surf Again[Start]
+;
+
+[CometRight]
+You are heading towards the sun. Feeling a warm wind providing heat from the solar waves. There is something in the distance. Do you want to go towards it or head home?
+<>Towards[TowardsSun]
+<>Home[TowardsHome]
+;
+
+[TowardsHome]{i:Images/dragon} 
+This is unfortunate. We will have have find another Space Surfer to go after the Gold of the Galaxy. If you change your mind, you can always try again.
+<>Surf Again [Start]
+;
+
+[TowardsSun]{i:Images/spacefield}
+A meteorite storm begins to fall. The wind is at your back. The meteorites are causes a lot of damage to your Tremor. You decided to return home before it is too late. You make it back to Earth just in time. Luckily, you live to search for the Galaxy of Gold another day. Try again, Space Surfer.
+<>Surf Again[Start]
+;
+
+
+[CometLeft] 
+You are traveling through a sea of stardust moving in waves toward you. The stars before you a twinkling with perfect vibrations. A meteorite shower begins to fall as your radio begins to pick up a faint signal. Do you head left or right?
+<>Left [MeteorLeft]
+<>Right [MeteorRight]
+;
+
+[MeteorLeft] 
+The radio waves get louder and the Tremor’s translating system tells you the Earth will be attacked by a group of hostile Extraterrestrial life. Do you go home and save the Earth or keep searching for the Galaxy of Gold?
+<>Earth [RadioEarth]
+<>Gold [RadioGold]
+;
+
+[RadioEarth]{i:Images/spacefield}
+You don’t get to the Galaxy of Gold, but you make it back to Earth and are celebrated as a hero for saving the planet.
+<>Surf Again[Start]
+;
+
+[RadioGold]{i:Images/spacefield}
+The comet appears. You ride on your Tremor to the middle of the Milky Way on the waves of mist to find the Gold of the Galaxy. Unfortunately, the Earth is destroyed.
+<>Surf Again[Start]
+;
+
+[MeteorRight] 
+The comet appears. You ride on your Tremor to the middle of the Milky Way on the waves of mist to find the Gold of the Galaxy. You see a Space Dragon as you approach. Do you try to get pass the Space Dragon to get to the Galaxy of Gold or do you go home?
+<>Gold[DragonGold]
+<>Home[HomeGold]
+;
+
+[DragonGold]{i:Images/dragon} 
+You are brave indeed, Space Surfer. The Space Dragon blows fire waves in your direction. You reflect the stream of fire with your magic shield and kill the Space Dragon. Unfortunately, this Space Dragon held a secret for getting to the Galaxy of Gold and now you will never know it. The comet has left you in middle of the middle way. Your ship is out of fuel and you are stranded. Maybe help will come for you and your Tremor some day.
+<>Surf Again[Start]
+;
+
+[HomeGold]{i:Images/dragon} 
+Unfortunately, you didn’t have what it takes to find the Galaxy of Gold. You get lost in the waves of stardust in the Milky Way and are unable to navigate your Tremor home.
+<>Surf Again[Start]
+;
+
+
+[LightSideOfMoon]
+You can see the heatwaves coming off the sun. There is a flash of light (Sound of Boom). You feel a spacequake moving at lightning speed on your Tremor. Do you keep moving towards the moon or turn towards the Milky Way?
+<>Moon[KeepMovingMoon]
+<>Milky Way[MilkyWay]
+;
+
+[KeepMovingMoon]
+There is a wave of fear that you feel. The sky rains waves of stardust. The space surfer shakes as an ice storm begins to freeze your radio system. Do you want to head home or continue on to the moon?
+<>Home[ReturnHome]
+<>Moon[ContinueToMoon]
+;
+
+[ReturnHome]{i:Images/spacefield}
+You return to Earth and your Tremor is destroyed. You fall into the ocean and are saved. When you return to the rocket station, your Love is there. Love gives you a hug.
+<>Surf Again[Start]
+;
+
+[ContinueToMoon]
+You land on an ice beach. Your Tremor is destroyed. You are alive, but you don’t know how you will get home. An extraterrestrial approaches you. Do you make friends or do you run away?
+<>Friends[Friends]
+<>Run[Run]
+;
+
+
+[Friends]{i:Images/spacefield}
+The extraterrestrial offers to take you to the Galaxy of Gold. You ride off into the Milky Way together in search of the Gold of the Galaxy and are never heard from again. Best of luck, Space Surfer.
+<>Surf Again[Start]
+;
+
+[Run]{i:Images/dragon}
+The extraterrestrial doesn’t chase you as you run toward the sun. You see another explosion from the sun. It blinds you and your personal radio gets reception. You listen to mission control talk about how they believe you died in a sun flare seen from Earth that caused a ripple in space.
+<>Surf Again[Start]
+;
+
+[MilkyWay]
+You feel a spacequake. Your Tremor is damaged, but you still have fuel and can navigate it. The Great Comet approaches. Do you get on the tail to the Galaxy of Gold or do you go back to Earth?
+<>Earth[BackToEarth]
+<>Gold[Gold]
+;
+
+[BackToEarth]{i:Images/spacefield}
+You make it back to Earth. You are tired and the Tremor is destroyed, but your Love is there and you get to try again. Better luck next time, Space Surfer.
+<>Surf Again[Start]
+;
+
+[Gold]{i:Images/dragon}
+You miscalculate the navigation ability of your Tremor. The Great Comet passes you and you are left a sea of stardust that dissipates around you as you dream of the ocean and your Love.
+<>Surf Again[Start]
+;
+
