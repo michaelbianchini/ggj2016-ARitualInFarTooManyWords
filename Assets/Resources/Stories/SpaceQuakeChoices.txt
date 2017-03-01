@@ -22,7 +22,7 @@ You are too afraid to fly. Sorry. We will have to find another Space Surfer to g
 <>Surf Again[Start]
 ;
 
-[HugYes]{s:Sounds/HugYes}
+[HugYes]{s:Sounds/GoldYes}
 Do you want to go to the Moon or the Milky Way?
 <>Moon[Moon]
 <>Milky Way[MilkyWay]
@@ -138,7 +138,7 @@ Unfortunately, you don’t have what it takes to find the Galaxy of Gold. You ge
 
 
 [LightSideOfMoon]{s:Sounds/LightSideOfMoon}
-You can see the heatwaves coming off the sun. There is a flash of light (Sound of Boom). You feel a spacequake moving at lightning speed on your Tremor. Do you keep moving towards the moon or turn towards the Milky Way?
+You can see the heatwaves coming off the sun. There is a flash of light. You feel a spacequake moving at lightning speed on your Tremor. Do you keep moving towards the moon or turn towards the Milky Way?
 <>Moon[KeepMovingMoon]
 <>Milky Way[SpaceQuake]
 ;

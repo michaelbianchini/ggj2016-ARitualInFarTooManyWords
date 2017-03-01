@@ -115,7 +115,10 @@ public class Game : MonoBehaviour
 				var audioElement = GetComponentInChildren<AudioSource>();
 				if (audioElement != null)
 				{
-					audioElement.PlayOneShot(ac, soundVolume);
+                    //audioElement.PlayOneShot(ac, soundVolume);
+                    audioElement.Stop();
+                    audioElement.clip = ac;
+                    audioElement.Play();
 				}
 			}
 			else
