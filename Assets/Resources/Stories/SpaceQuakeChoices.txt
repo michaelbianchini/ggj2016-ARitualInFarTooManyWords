@@ -1,7 +1,7 @@
-﻿[Start]
+﻿[Start]{s:Sounds/Start}
 Space Quake
 
-You are the Space Surfer. Your job is to take your Tremor to ride the waves space in search of the Galaxy of Gold. 
+You are the Space Surfer. Your job is to take your Tremor to ride the waves of space in search of the Galaxy of Gold. 
 <>Continue[Earth]
 ;
 
@@ -29,8 +29,6 @@ Do you want to go to the Moon or the Milky Way?
 ;
 
 [GoldYes]{s:Sounds/GoldYes}
-(Sound Effects and possible visual elements of the Space Surfer taking off, the crowd cheering in waves, the sound of the jet engines with increasing volume until the sound barrier is broken, and the Space Surfer is in space.)
-
 Do you want to go to the Moon or the Milky Way?
 <>Moon[Moon]
 <>Milky Way[MilkyWay]

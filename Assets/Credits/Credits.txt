@@ -1,7 +1,7 @@
 Based off of GGJ2016 Choose Your Own Adventure Engine! See below!
 
+Writer/Game Designer : Ama Birch
 Sound Design : Brian Luft
-Writer : Ama Birch
 3D Environment Artist : Anthony Bagsby
 Particle Effects : Jesse Ash
 3D Character Artist : James Davis
@@ -11,8 +11,8 @@ Programmer : Mike Bianchini
 Thanks
 Kunal Patel
 Tyler Quillen
-
-
+CECO
+Rosene Johnson
 
 
 Choose Your Own Adventure Engine Team:
