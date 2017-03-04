@@ -74,7 +74,7 @@ Using the waves of your speed of light heat wave tool you defeat the Space Drago
 <>Surf Again[Start]
 ;
 
-[StayComet]{s:Sounds/StayComet,s:Sounds/Gold_B_01,i:Images/galaxy_of_gold}
+[StayComet]{s:Sounds/StayComet,i:Images/galaxy_of_gold}
 The Great Comet brings you directly to the Space Dragon. You can see the Gold of the Galaxy in the near distance. You use your speed of light heat waves tool to blind the Space Dragon. The Great Comet brings you to the gold. You get the Gold of the Galaxy! You jump off the Great Comet’s tail and engage your rocket jets using your momentum to head back to Earth. You are now very wealthy, Space Surfer. YOU WIN!
 <>Surf Again[Start]
 ;
@@ -97,7 +97,7 @@ A meteorite storm begins to fall. The wind is at your back. The meteorites are c
 
 
 [CometLeft]{s:Sounds/CometLeft}
-You are traveling through a sea of stardust moving in waves toward you. The stars before you a twinkling with perfect vibrations. A meteorite shower begins to fall as your radio begins to pick up a faint signal. Do you head left or right?
+You are traveling through a sea of stardust moving in waves toward you. The stars before you a twinkling with perfect vibration. A meteorite shower begins to fall as your radio begins to pick up a faint signal. Do you head left or right?
 <>Left [MeteorLeft]
 <>Right [MeteorRight]
 ;
@@ -125,7 +125,7 @@ The comet appears. You ride on your Tremor to the middle of the Milky Way on the
 ;
 
 [DragonGold]{s:Sounds/DragonGold,i:Images/dragon} 
-You are brave indeed, Space Surfer. The Space Dragon blows fire waves in your direction. You reflect the stream of fire with your magic shield and kill the Space Dragon. Unfortunately, this Space Dragon held a secret for getting to the Galaxy of Gold and now you will never know it. The comet has left you in middle of the middle way. Your ship is out of fuel and you are stranded. Maybe help will come for you and your Tremor some day.
+You are brave indeed, Space Surfer. The Space Dragon blows fire waves in your direction. You reflect the stream of fire with your magic shield and kill the Space Dragon. Unfortunately, the Space Dragon held a secret for getting to the Galaxy of Gold and now you will never know it. The comet has left you in middle of the middle way. Your ship is out of fuel and you are stranded. Maybe help will come for you and your Tremor some day.
 <>Surf Again[Start]
 ;
 

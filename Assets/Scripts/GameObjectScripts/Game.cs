@@ -112,7 +112,7 @@ public class Game : MonoBehaviour
 			var ac = Resources.Load<AudioClip>(soundId);
 			if (ac != null)
 			{
-				var audioElement = GetComponentInChildren<AudioSource>();
+				var audioElement = GetComponent<AudioSource>();
 				if (audioElement != null)
 				{
                     //audioElement.PlayOneShot(ac, soundVolume);

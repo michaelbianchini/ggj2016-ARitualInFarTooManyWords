@@ -1,26 +1,14 @@
-Based off of GGJ2016 Choose Your Own Adventure Engine! See below!
-
 Writer/Game Designer : Ama Birch
 Sound Design : Brian Luft
 3D Environment Artist : Anthony Bagsby
 Particle Effects : Jesse Ash
 3D Character Artist : James Davis
+Title Animation : Victor Sosa
 Lead Programmer : Jesse Pascoe
 Programmer : Mike Bianchini
 
 Thanks
 Kunal Patel
 Tyler Quillen
-CECO
 Rosene Johnson
-
-
-Choose Your Own Adventure Engine Team:
-
-Scott "Scooter" Martin - Writing
-Jeff Kikel - Writing
-E "QnRamoth" Denison - Writing
-Jesse "Archimagus" Pascoe - Programming
-
-
-
+CECO
