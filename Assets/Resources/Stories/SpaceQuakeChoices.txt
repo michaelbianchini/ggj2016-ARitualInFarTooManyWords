@@ -11,7 +11,7 @@ Are you ready to takeoff on your Tremor to find the Gold of the Galaxy?
 <>No[GoldNo]
 ;
 
-[GoldNo]{s:Sounds/GoldNo}
+[GoldNo]{s:Sounds/GoldNo,i:Images/heart}
 You get one last hug from your Love. Are you ready to takeoff on your Tremor to find the Gold of the Galaxy?
 <>Yes[HugYes]
 <>No[HugNo]
@@ -147,7 +147,7 @@ There is a wave of fear that you feel. The sky rains waves of stardust. The spac
 <>Moon[ContinueToMoon]
 ;
 
-[ReturnHome]{s:Sounds/ReturnHome,i:Images/spacefield}
+[ReturnHome]{s:Sounds/ReturnHome,i:Images/heart}
 You return to Earth and your Tremor is destroyed. You fall into the ocean and are saved. When you return to the rocket station, your Love is there. Love gives you a hug.
 <>Surf Again[Start]
 ;
@@ -175,12 +175,12 @@ You feel a spacequake. Your Tremor is damaged, but you still have fuel and can n
 <>Gold[Gold]
 ;
 
-[BackToEarth]{s:Sounds/BackToEarth,i:Images/spacefield}
+[BackToEarth]{s:Sounds/BackToEarth,i:Images/heart}
 You make it back to Earth. You are tired and the Tremor is destroyed, but your Love is there and you get to try again. Better luck next time, Space Surfer.
 <>Surf Again[Start]
 ;
 
-[Gold]{s:Sounds/Gold,i:Images/dragon}
+[Gold]{s:Sounds/Gold,i:Images/heart}
 You miscalculate the navigation ability of your Tremor. The Great Comet passes you and you are left a sea of stardust that dissipates around you as you dream of the ocean and your Love.
 <>Surf Again[Start]
 ;
