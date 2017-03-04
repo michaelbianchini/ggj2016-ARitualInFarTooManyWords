@@ -85,7 +85,7 @@ You are heading towards the sun. Feeling a warm wind providing heat from the sol
 <>Home[TowardsHome]
 ;
 
-[TowardsHome]{s:Sounds/TowardsHome,i:Images/dragon} 
+[TowardsHome]{s:Sounds/TowardsHome,i:Images/dragon}
 This is unfortunate. We will have have find another Space Surfer to go after the Gold of the Galaxy. If you change your mind, you can always try again.
 <>Surf Again [Start]
 ;
