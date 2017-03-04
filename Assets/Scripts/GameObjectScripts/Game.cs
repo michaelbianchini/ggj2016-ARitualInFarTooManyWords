@@ -22,7 +22,11 @@ public class Game : MonoBehaviour
 	StringBuilder _story = new StringBuilder();
 	HashSet<string> _flags = new HashSet<string>();
 
-	void Start()
+    /*TODO REMOVE GLOBAL VARIABLES */
+    GameEvent e;
+    AudioSource audioElement;
+
+    void Start()
 	{
 		_eventText = _textAreaScrollView.GetComponentInChildren<Text>();
 		if (_eventDatabase == null)
@@ -43,9 +47,10 @@ public class Game : MonoBehaviour
 	{
 		if (key == "Start")
 			_story = new StringBuilder();
-		var e = _eventDatabase[key];
-		//_eventText.text = "<color=grey>" + _story.ToString() + "</color>" + "<color=white>" + e.Text + "</color>";
-		_eventText.text = "<color=white>" + e.Text + "</color>";
+		e = _eventDatabase[key];
+        audioElement = GetComponent<AudioSource>();
+        //_eventText.text = "<color=grey>" + _story.ToString() + "</color>" + "<color=white>" + e.Text + "</color>";
+        _eventText.text = "<color=white>" + e.Text + "</color>";
 		_story.Append(e.Text);
 		StartCoroutine(UpdateScroll());
 
@@ -85,34 +90,16 @@ public class Game : MonoBehaviour
 				b.onClick.AddListener(() => GoToEvent(o.Target));
 			}
 		}
-		if (e.ImageId.IsNullOrEmpty())
-		{
-			//_backgroundImage.enabled = false;
-			_backgroundImage.enabled = true;
-			_backgroundImage.sprite = Resources.Load<Sprite>("Images/black");
-		}
-		else
-		{
-			var img = Resources.Load<Sprite>(e.ImageId);
-			if (img != null)
-			{
-				_backgroundImage.enabled = true;
-				_backgroundImage.sprite = img;
-			}
-			else
-			{
-				Debug.LogError("No image found for " + e.ImageId);
-			}
+        /* TODO FIX MULTIPLE SOUNDS */
 
-		}
-		for (int i = 0; i < e.SoundIds.Count; i++)
+        for (int i = 0; i < e.SoundIds.Count; i++)
 		{
 			var soundId = e.SoundIds[i];
 			var soundVolume = e.SoundVolumes[i];
 			var ac = Resources.Load<AudioClip>(soundId);
 			if (ac != null)
 			{
-				var audioElement = GetComponent<AudioSource>();
+				
 				if (audioElement != null)
 				{
                     //audioElement.PlayOneShot(ac, soundVolume);
@@ -126,5 +113,41 @@ public class Game : MonoBehaviour
 				Debug.LogError("No audio clip found for " + soundId);
 			}
 		}
-	}
+     }
+    void showImage(string imageID)
+    {
+        var img = Resources.Load<Sprite>(imageID);
+        if (img != null)
+        {
+            _backgroundImage.enabled = true;
+            _backgroundImage.sprite = img;
+            _eventText.text = "";
+        }
+        else
+        {
+            Debug.LogError("No image found for " + e.ImageId);
+        }
+    }
+    void Update()
+    {
+
+        if (e.ImageId.IsNullOrEmpty())
+        {
+            //_backgroundImage.enabled = false;
+            _backgroundImage.enabled = true;
+            _backgroundImage.sprite = Resources.Load<Sprite>("Images/black");
+        }
+        else
+        {
+            if (audioElement.isPlaying)
+            {
+                _backgroundImage.enabled = true;
+                _backgroundImage.sprite = Resources.Load<Sprite>("Images/black");
+            }
+            else
+            {
+                showImage(e.ImageId);
+            }
+        }
+    }
 }

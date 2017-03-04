@@ -75,7 +75,7 @@ Using the waves of your speed of light heat wave tool you defeat the Space Drago
 ;
 
 [StayComet]{s:Sounds/StayComet,i:Images/galaxy_of_gold}
-The Great Comet brings you directly to the Space Dragon. You can see the Gold of the Galaxy in the near distance. You use your speed of light heat waves tool to blind the Space Dragon. The Great Comet brings you to the gold. You get the Gold of the Galaxy! You jump off the Great Comet’s tail and engage your rocket jets using your momentum to head back to Earth. You are now very wealthy, Space Surfer. YOU WIN!
+The Great Comet brings you directly to the Space Dragon. You can see the Gold of the Galaxy in the near distance. You use your speed of light heat waves tool to blind the Space Dragon. The Great Comet brings you to the gold. You get the Gold of the Galaxy! You jump off the Great Comet’s tail and engage your rocket jets using your momentum to head back to Earth. You are now a very wealthy Space Surfer. YOU WIN!
 <>Surf Again[Start]
 ;
 
