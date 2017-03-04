@@ -91,7 +91,7 @@ This is unfortunate. We will have have find another Space Surfer to go after the
 ;
 
 [TowardsSun]{s:Sounds/TowardsSun,i:Images/spacefield}
-A meteorite storm begins to fall. The wind is at your back. The meteorites are causes a lot of damage to your Tremor. You decided to return home before it is too late. You make it back to Earth just in time. Luckily, you live to search for the Galaxy of Gold another day. Try again, Space Surfer.
+A meteorite storm begins to fall. The wind is at your back. The meteorites are causing a lot of damage to your Tremor. You decided to return home before it is too late. You make it back to Earth just in time. Luckily, you live to search for the Galaxy of Gold another day. Try again, Space Surfer.
 <>Surf Again[Start]
 ;
 
